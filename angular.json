@@ -5,7 +5,11 @@
   "projects": {
     "cleydsonsobral": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -24,8 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -89,8 +92,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -125,6 +127,6 @@
   },
   "defaultProject": "cleydsonsobral",
   "cli": {
-    "analytics": "06085bbb-03bd-4983-9cf9-9f6647be51d8"
+    "analytics": "11fe5e60-9651-421b-aee5-636044c5ef5c"
   }
 }
