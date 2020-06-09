@@ -78,8 +78,8 @@ $md-cinza: (
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$cleydsonsobral-primary: mat-palette($md-laranja);
-$cleydsonsobral-accent: mat-palette($md-cinza);
+$cleydsonsobral-primary: mat-palette($md-cinza);
+$cleydsonsobral-accent: mat-palette($md-laranja);
 
 // The warn palette is optional (defaults to red).
 $cleydsonsobral-warn: mat-palette($mat-red);

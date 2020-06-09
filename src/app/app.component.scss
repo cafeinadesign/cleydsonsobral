@@ -7,8 +7,7 @@ $margin-promotion-sections-small: 15px;
 }
 
 .docs-header-section {
-    text-align: center;
-    padding-top: $margin-promotion-sections;
+    padding: $margin-promotion-sections;
 }
 
 .docs-header-headline {
@@ -16,14 +15,12 @@ $margin-promotion-sections-small: 15px;
         font-size: 56px;
         font-weight: 300;
         line-height: 56px;
-        margin: 15px 5px;
     }
 
     h2 {
         font-size: 18px;
         font-weight: 300;
         line-height: 28px;
-        margin: 15px 0 25px 0;
     }
 }
 
@@ -94,6 +91,11 @@ footer {
     bottom: 10px;
     width: 100%;
     text-align: center;
+}
+
+#homepage-header {
+    background-image: url('../assets/comida-brasileira.jpeg');
+    background-size: cover;
 }
 
 /**
