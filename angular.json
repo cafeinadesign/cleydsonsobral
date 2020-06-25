@@ -127,6 +127,6 @@
   },
   "defaultProject": "cleydsonsobral",
   "cli": {
-    "analytics": "11fe5e60-9651-421b-aee5-636044c5ef5c"
+    "analytics": false
   }
 }

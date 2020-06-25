@@ -1,76 +1,60 @@
-<mat-toolbar class="mat-elevation-z6" role="heading">
-  <mat-toolbar-row>
-    <img src="../assets/logo.svg" alt="Cleydson Sobral" width="auto" height="20">
-    <div class="spacer"></div>
-    <a mat-button aria-label="Cleydson Sobral no Instagram" target="_blank" rel="noopener"
-      href="https://www.instagram.com/cleydsonsobral/" title="Instagram" class="navbar-hide-small">
-      <img src="assets/img/instagram.svg" alt="whatsapp" height="20" style="margin-right: 3px;">
-      @cleydsonsobral
-    </a>
-    <a mat-icon-button aria-label="Cleydson Sobral no Instagram" target="_blank" rel="noopener"
-      href="https://www.instagram.com/cleydsonsobral/" title="Instagram" class="navbar-show-small">
-      <img src="assets/img/instagram.svg" alt="whatsapp" height="20" style="margin-right: 3px;">
-    </a>
-    <a mat-button aria-label="Cleydson Sobral no WhatsApp" target="_blank" rel="noopener"
-      href="https://api.whatsapp.com/send?phone=558199040213&text=Ol%C3%A1%20Cleydson%20Sobral%2C%20quero%20agendar%20uma%20consulta%20com%20voc%C3%AA!"
-      title="WhatsApp" class="navbar-hide-small">
-      <img src="assets/img/whatsapp.svg" alt="whatsapp" height="24">
-      (81) 9904-0213
-    </a>
-    <a mat-icon-button aria-label="Cleydson Sobral no WhatsApp" target="_blank" rel="noopener"
-      href="https://api.whatsapp.com/send?phone=558199040213&text=Ol%C3%A1%20Cleydson%20Sobral%2C%20quero%20agendar%20uma%20consulta%20com%20voc%C3%AA!"
-      title="WhatsApp" class="navbar-show-small">
-      <img src="assets/img/whatsapp.svg" alt="whatsapp" height="24">
-    </a>
-  </mat-toolbar-row>
-</mat-toolbar>
-
-<header focusOnNavigation class="docs-header-background" aria-label="Agendamento Online" id="homepage-header">
-  <div class="docs-header-section">
-    <div class="docs-header-headline">
-      <h1>O Básico que Funciona!</h1>
-      <h2>Cleydson Sobral é nutricionista com expertise em emagrecimento e no <br>tratamento da obesidade e nutrição
-        esportiva.</h2>
-    </div>
-
-    <div class="docs-header-start">
+<nav>
+  <mat-toolbar class="mat-elevation-z6">
+    <mat-toolbar-row class="container">
+      <img src="../assets/logo.svg" alt="Cleydson Sobral" width="auto" height="20">
+      <div class="spacer"></div>
+      <a mat-button aria-label="Cleydson Sobral no Instagram" target="_blank" rel="noopener"
+        href="https://www.instagram.com/cleydsonsobral/" title="Instagram" class="hide-small">
+        <img src="assets/img/instagram.svg" alt="whatsapp" height="20" style="margin-right: 3px;">
+        @cleydsonsobral
+      </a>
+      <a mat-icon-button aria-label="Cleydson Sobral no Instagram" target="_blank" rel="noopener"
+        href="https://www.instagram.com/cleydsonsobral/" title="Instagram" class="show-small">
+        <img src="assets/img/instagram.svg" alt="whatsapp" height="20" style="margin-right: 3px;">
+      </a>
+      <a mat-button aria-label="Cleydson Sobral no WhatsApp" target="_blank" rel="noopener"
+        href="https://api.whatsapp.com/send?phone=558199040213&text=Ol%C3%A1%20Cleydson%20Sobral%2C%20quero%20agendar%20uma%20consulta%20com%20voc%C3%AA!"
+        title="WhatsApp" class="hide-small">
+        <img src="assets/img/whatsapp.svg" alt="whatsapp" height="24">
+        (81) 9904-0213
+      </a>
+      <a mat-icon-button aria-label="Cleydson Sobral no WhatsApp" target="_blank" rel="noopener"
+        href="https://api.whatsapp.com/send?phone=558199040213&text=Ol%C3%A1%20Cleydson%20Sobral%2C%20quero%20agendar%20uma%20consulta%20com%20voc%C3%AA!"
+        title="WhatsApp" class="show-small">
+        <img src="assets/img/whatsapp.svg" alt="whatsapp" height="24">
+      </a>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</nav>
+<header focusOnNavigation>
+  <div class="header">
+    <div class="container">
+      <h1 class="mat-display-3">O Básico que Funciona!</h1>
+      <h2 class="mat-headline">Cleydson Sobral é nutricionista com expertise em emagrecimento e no <br>tratamento da obesidade
+        e nutrição esportiva.</h2>
       <button mat-raised-button>
         <mat-icon>videocam</mat-icon> Agendar consulta
       </button>
-      <!-- <button type="button" class="pay-button-getnet" mat-raised-button color="accent">Realizar pagamento</button> -->
     </div>
   </div>
 </header>
-<main>
-  <div id="sobre-mim" class="container">
-    <div class="row">
-      <div class="col-3" id="sobre-mim-img">
-        <img src="assets/img/cleydsonsobral.jpeg" alt="Cleydson Sobral">
-      </div>
-      <div class="col-9" id="sobre-mim-desc">
-        <h1 class="mat-display-1">Nutricionista Cleydson Sobral</h1>
-        <ul>
-          <li>Graduado em Nutrição</li>
-          <li>Graduado em Educação Física</li>
-          <li>Pós Graduado no Tratamento da Obesidade e Emagrecimento</li>
-          <li>Pós Graduado em Nutrição Esportiva</li>
-          <li>Pós Graduado em Treinamento de Força e Musculação</li>
-        </ul>
-      </div>
+<main class="container">
+  <div class="row">
+    <div class="col-sm-9">
+      <h1 class="mat-display-1">Nutricionista Cleydson Sobral</h1>
+      <ul>
+        <li>Graduado em Nutrição</li>
+        <li>Graduado em Educação Física</li>
+        <li>Pós Graduado no Tratamento da Obesidade e Emagrecimento</li>
+        <li>Pós Graduado em Nutrição Esportiva</li>
+        <li>Pós Graduado em Treinamento de Força e Musculação</li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <img src="assets/img/cleydsonsobral.jpeg" alt="Cleydson Sobral" width="100%" class="mat-elevation-z4">
     </div>
   </div>
 </main>
 <footer>
   Cleydson Sobral © 2020 Todos direitos reservados | CRN: 10061
 </footer>
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-
-<router-outlet></router-outlet>

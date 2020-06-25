@@ -1,142 +1,62 @@
-// The margin between two sections
-// $margin-promotion-sections: 20px;
-// $margin-promotion-sections-small: 15px;
-
-.mat-toolbar {
-    background: white;
+mat-toolbar {
+    position: relative;
 }
-
-.navbar-show-small {
+.spacer {
+    flex-grow: 1;
+}
+.show-small {
     display: none;
 }
-
-.docs-header-background {
-    overflow: hidden;
+.hide-small {
+    display: block;
 }
-
-.docs-header-section {
-    padding: 60px;
-}
-
-.docs-header-headline {
-    color: white;
-    // text-shadow: 2px 2px 8px #000;
-    h1 {
-        font-size: 56px;
-        font-weight: 300;
-        line-height: 56px;
-    }
-
-    h2 {
-        font-size: 18px;
-        font-weight: 300;
-        line-height: 28px;
-    }
-}
-
-.docs-homepage-promo {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-
-    h2 {
-        font-size: 25px;
-        font-weight: 400;
-        margin: 0 0 16px 0;
-        padding: 0;
-    }
-
-    p {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 28px;
-        margin: 0 0 24px 0;
-        padding: 0;
-    }
-}
-
-.docs-homepage-row {
-    display: flex;
-    max-width: 920px;
-    margin: 20px 0;
-}
-
-.docs-homepage-row .docs-svg-image {
-    max-width: 90%;
-}
-
-.docs-homepage-reverse-row {
-    flex-direction: row-reverse;
-}
-
-.docs-header-start,
-.docs-homepage-bottom-start {
-    // text-align: center;
-    margin: 20px 0;
-}
-
-.docs-homepage-promo-img,
-.docs-homepage-promo-desc {
-    width: 50%;
-}
-
-.docs-homepage-promo-img {
-    text-align: center;
-}
-
-.docs-homepage-promo-desc {
-    line-height: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.spacer {
-    flex: 1 1 auto;
-}
-
-#sobre-mim-img img {
-    width: 100%;
-}
-
-#sobre-mim-desc h1 {
-    color: #df7b2a;
-}
-
-footer {
-    width: 100%;
-    text-align: center;
-}
-
-#homepage-header {
+header {
     background-image: url("../assets/comida-brasileira.jpeg");
     background-size: cover;
+    margin-bottom: 40px;
+    div.header {
+        padding: 60px 0;
+        background: rgb(223, 123, 42);
+        background: linear-gradient(102deg, rgba(223, 123, 42, 1) 62%, rgba(223, 123, 42, 0) 62%);
+    }
+    h1.mat-display-3,
+    h2.mat-headline {
+        color: #fff;
+    }
 }
-
-.docs-header-section {
-    // background: rgb(0, 0, 0);
-    // background: linear-gradient(90deg, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0) 100%);
-    background: rgb(223, 123, 42);
-    background: linear-gradient(102deg, rgba(223, 123, 42, 1) 56%, rgba(223, 123, 42, 0) 56%);
+main {
+    h1.mat-display-1 {
+        color: #df7b2a;
+        margin: 20px 0 32px;
+    }
+    h2.mat-headline {
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+    ul li {
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+footer {
+    margin: 40px 0 0;
+    padding: 20px;
+    background-color: #383b3f;
+    color: #fff;
+    text-align: center;
 }
 
 /**
-  * Rules for when the device is detected to be a small screen.
-  */
+    * Rules for when the device is detected to be a small screen.
+    */
 @media (max-width: 720px) {
-    .navbar-show-small {
+    .show-small {
         display: block;
     }
-    .navbar-hide-small {
+    .hide-small {
         display: none;
     }
-    .docs-header-section {
-        padding: 20px;
-    }
-    .docs-header-section {
-        // background: rgb(0, 0, 0);
-        // background: linear-gradient(90deg, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0) 100%);
+    header div.header {
         background: rgb(223, 123, 42);
         background: linear-gradient(102deg, rgba(223, 123, 42, 1) 88%, rgba(223, 123, 42, 0) 88%);
     }
