@@ -1,16 +1,26 @@
 // The margin between two sections
-$margin-promotion-sections: 60px;
-$margin-promotion-sections-small: 15px;
+// $margin-promotion-sections: 20px;
+// $margin-promotion-sections-small: 15px;
+
+.mat-toolbar {
+    background: white;
+}
+
+.navbar-show-small {
+    display: none;
+}
 
 .docs-header-background {
     overflow: hidden;
 }
 
 .docs-header-section {
-    padding: $margin-promotion-sections;
+    padding: 60px;
 }
 
 .docs-header-headline {
+    color: white;
+    // text-shadow: 2px 2px 8px #000;
     h1 {
         font-size: 56px;
         font-weight: 300;
@@ -49,7 +59,7 @@ $margin-promotion-sections-small: 15px;
 .docs-homepage-row {
     display: flex;
     max-width: 920px;
-    margin: $margin-promotion-sections 0;
+    margin: 20px 0;
 }
 
 .docs-homepage-row .docs-svg-image {
@@ -62,8 +72,8 @@ $margin-promotion-sections-small: 15px;
 
 .docs-header-start,
 .docs-homepage-bottom-start {
-    text-align: center;
-    margin: $margin-promotion-sections 0;
+    // text-align: center;
+    margin: 20px 0;
 }
 
 .docs-homepage-promo-img,
@@ -86,32 +96,48 @@ $margin-promotion-sections-small: 15px;
     flex: 1 1 auto;
 }
 
+#sobre-mim-img img {
+    width: 100%;
+}
+
+#sobre-mim-desc h1 {
+    color: #df7b2a;
+}
+
 footer {
-    position: absolute;
-    bottom: 10px;
     width: 100%;
     text-align: center;
 }
 
 #homepage-header {
-    background-image: url('../assets/comida-brasileira.jpeg');
+    background-image: url("../assets/comida-brasileira.jpeg");
     background-size: cover;
+}
+
+.docs-header-section {
+    // background: rgb(0, 0, 0);
+    // background: linear-gradient(90deg, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0) 100%);
+    background: rgb(223, 123, 42);
+    background: linear-gradient(102deg, rgba(223, 123, 42, 1) 56%, rgba(223, 123, 42, 0) 56%);
 }
 
 /**
   * Rules for when the device is detected to be a small screen.
   */
 @media (max-width: 720px) {
+    .navbar-show-small {
+        display: block;
+    }
+    .navbar-hide-small {
+        display: none;
+    }
     .docs-header-section {
-        padding-top: $margin-promotion-sections-small;
+        padding: 20px;
     }
-
-    .docs-header-start,
-    .docs-homepage-bottom-start {
-        margin: $margin-promotion-sections-small 0;
-    }
-
-    .docs-homepage-row {
-        margin: $margin-promotion-sections-small 0;
+    .docs-header-section {
+        // background: rgb(0, 0, 0);
+        // background: linear-gradient(90deg, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0) 100%);
+        background: rgb(223, 123, 42);
+        background: linear-gradient(102deg, rgba(223, 123, 42, 1) 88%, rgba(223, 123, 42, 0) 88%);
     }
 }
