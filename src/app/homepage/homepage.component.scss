@@ -10,6 +10,7 @@ header {
     h1.mat-display-3,
     h2.mat-headline {
         color: #fff;
+        text-shadow: 2px 2px 8px #000;
     }
     h1.mat-display-3 {
         font-weight: 300;
@@ -69,9 +70,16 @@ article {
 @media (max-width: 720px) {
     header {
         background-image: url("../../assets/comida-brasileira-mobile.webp");
+        background-position-x: right;
         div.header {
             background: rgb(0, 0, 0);
-            background: linear-gradient(102deg, rgba(0, 0, 0, 0.72) 66%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(102deg, rgba(0, 0, 0, 0.80) 72%, rgba(0, 0, 0, 0) 100%);
+        }
+    }
+    main {
+        h1.mat-display-1 {
+            color: #df7b2a;
+            margin: 0 0 10px;
         }
     }
 }
