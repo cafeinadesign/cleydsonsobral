@@ -4,25 +4,53 @@ header {
     margin-bottom: 40px;
     div.header {
         padding: 60px 0;
-        background: rgb(223, 123, 42);
-        background: linear-gradient(102deg, rgba(223, 123, 42, 1) 62%, rgba(223, 123, 42, 0) 62%);
+        background: rgb(0, 0, 0);
+        background: linear-gradient(102deg, rgba(0, 0, 0, 0.83) 50%, rgba(0, 0, 0, 0) 82%);
     }
     h1.mat-display-3,
     h2.mat-headline {
         color: #fff;
     }
     h1.mat-display-3 {
-        margin-bottom: 32PX;
+        font-weight: 300;
+        margin-bottom: 15px;
     }
     h2.mat-headline {
         font-weight: 300;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
+}
+.mat-raised-button {
+    border-radius: 20px;
 }
 main {
     h1.mat-display-1 {
         color: #df7b2a;
         margin: 20px 0 26px;
+    }
+}
+
+section {
+    text-align: center;
+    background-color: #383b3f;
+    color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    ul {
+        list-style: none;
+    }
+    h1.mat-display-1 {
+        color: #df7b2a;
+        margin: 20px 0 26px;
+    }
+    a {
+        margin-bottom: 20px;
+    }
+}
+
+article {
+    h2.mat-title {
+        color: #df7b2a;
     }
 }
 
