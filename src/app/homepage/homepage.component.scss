@@ -1,5 +1,5 @@
 header {
-    background-image: url("../../assets/comida-brasileira.jpeg");
+    background-image: url("../../assets/comida-brasileira.webp");
     background-size: cover;
     margin-bottom: 40px;
     div.header {
@@ -39,9 +39,18 @@ section {
     ul {
         list-style: none;
     }
-    h1.mat-display-1 {
+    h1.mat-display-2 {
         color: #df7b2a;
         margin: 20px 0 26px;
+        font-weight: 300;
+    }
+    p.mat-h1 {
+        font-weight: 300;
+        strong {
+            background-color: #df7b2a;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
     }
     a {
         margin-bottom: 20px;
@@ -58,8 +67,11 @@ article {
     * Rules for when the device is detected to be a small screen.
     */
 @media (max-width: 720px) {
-    header div.header {
-        background: rgb(223, 123, 42);
-        background: linear-gradient(102deg, rgba(223, 123, 42, 1) 88%, rgba(223, 123, 42, 0) 88%);
+    header {
+        background-image: url("../../assets/comida-brasileira-mobile.webp");
+        div.header {
+            background: rgb(0, 0, 0);
+            background: linear-gradient(102deg, rgba(0, 0, 0, 0.72) 66%, rgba(0, 0, 0, 0) 100%);
+        }
     }
 }
