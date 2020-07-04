@@ -13,6 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { TermosDeUsoComponent } from './termos-de-uso/termos-de-uso.component';
+import { PoliticaDeCancelamentoComponent } from './politica-de-cancelamento/politica-de-cancelamento.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TermosDeUsoComponent } from './termos-de-uso/termos-de-uso.component';
     NavbarComponent,
     FooterComponent,
     HomepageComponent,
-    TermosDeUsoComponent
+    TermosDeUsoComponent,
+    PoliticaDeCancelamentoComponent
   ],
   imports: [
     BrowserModule,
