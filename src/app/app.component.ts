@@ -10,8 +10,4 @@ export class AppComponent implements OnInit {
   title = 'cleydsonsobral';
   ngOnInit() {
   }
-
-  checkout() {
-    console.log('olá!');
-  }
 }
