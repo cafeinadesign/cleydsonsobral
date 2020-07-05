@@ -6,7 +6,7 @@ header {
     div.header {
         padding: 60px 0;
         background: rgb(0, 0, 0);
-        background: linear-gradient(102deg, rgba(0, 0, 0, 0.62) 50%, rgba(0, 0, 0, 0) 82%);
+        background: linear-gradient(102deg, rgba(0, 0, 0, 0.50) 50%, rgba(0, 0, 0, 0) 82%);
         background-position: bottom center;
     }
     h1.mat-display-3,
@@ -90,7 +90,7 @@ article {
         background-position-x: right;
         div.header {
             background: rgb(0, 0, 0);
-            background: linear-gradient(120deg, rgba(0, 0, 0, 0.62) 62%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(120deg, rgba(0, 0, 0, 0.50) 62%, rgba(0, 0, 0, 0) 100%);
         }
     }
     main {
