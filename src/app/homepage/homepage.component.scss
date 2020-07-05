@@ -29,16 +29,26 @@ main {
         color: #df7b2a;
         margin: 20px 0 26px;
     }
+    h2 {
+        color: #383b3f;
+        font-weight: normal;
+    }
 }
 
 section {
     text-align: center;
     background-color: #383b3f;
     color: #fff;
-    padding: 20px;
+    padding: 20px 0;
     margin: 20px 0;
     ul {
         list-style: none;
+        padding-inline-start: 0;
+    }
+    h1.mat-display-1 {
+        color: #df7b2a;
+        font-weight: 300;
+        margin: 0;
     }
     h1.mat-display-2 {
         color: #df7b2a;
@@ -62,6 +72,11 @@ article {
     h2.mat-title {
         color: #df7b2a;
     }
+}
+
+.mat-expansion-panel-header-title {
+    color: #383b3f;
+    font-weight: bold;
 }
 
 /**
