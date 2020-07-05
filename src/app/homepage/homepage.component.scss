@@ -1,11 +1,13 @@
 header {
-    background-image: url("../../assets/comida-brasileira.jpeg");
+    background-image: url("../../assets/501148678-huge2.jpg");
+    background-position: center center;
     background-size: cover;
     margin-bottom: 40px;
     div.header {
         padding: 60px 0;
         background: rgb(0, 0, 0);
-        background: linear-gradient(102deg, rgba(0, 0, 0, 0.83) 50%, rgba(0, 0, 0, 0) 82%);
+        background: linear-gradient(102deg, rgba(0, 0, 0, 0.62) 50%, rgba(0, 0, 0, 0) 82%);
+        background-position: bottom center;
     }
     h1.mat-display-3,
     h2.mat-headline {
@@ -84,7 +86,7 @@ article {
     */
 @media (max-width: 720px) {
     header {
-        background-image: url("../../assets/comida-brasileira-mobile.jpg");
+        background-image: url("../../assets/arroz-feijao-mobile.jpg");
         background-position-x: right;
         div.header {
             background: rgb(0, 0, 0);
