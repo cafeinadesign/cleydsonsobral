@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { TermosDeUsoComponent } from './termos-de-uso/termos-de-uso.component';
 import { PoliticaDeCancelamentoComponent } from './politica-de-cancelamento/politica-de-cancelamento.component';
+import { Nutricao4xComponent } from './nutricao4x/nutricao4x.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PoliticaDeCancelamentoComponent } from './politica-de-cancelamento/poli
     FooterComponent,
     HomepageComponent,
     TermosDeUsoComponent,
-    PoliticaDeCancelamentoComponent
+    PoliticaDeCancelamentoComponent,
+    Nutricao4xComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,7 @@ import { PoliticaDeCancelamentoComponent } from './politica-de-cancelamento/poli
     MatButtonModule,
     MatExpansionModule
   ],
-  providers: [],
+  providers: [Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
