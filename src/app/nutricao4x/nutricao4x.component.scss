@@ -93,3 +93,20 @@ header > div > div > div > div.jumbotron > a:nth-child(1) {
     display: block;
     text-align: center;
 }
+
+/**
+    * Rules for when the device is detected to be a small screen.
+    */
+@media (max-width: 720px) {
+    .header > div > div > div.jumbotron {
+        h1.mat-display-3 {
+            font-size: 34px;
+            line-height: 48px;
+        }
+    }
+    p {
+        font-family: "Barlow", sans-serif;
+        font-size: 20px;
+        line-height: normal;
+    }
+}
