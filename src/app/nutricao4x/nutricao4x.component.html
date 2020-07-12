@@ -1,42 +1,64 @@
-<header>
+<header class="mat-elevation-z6">
     <div class="header">
         <div class="container">
-            <h1 class="mat-display-3">DESCUBRA COMO A ORIENTAÇÃO DE UM PROFISSIONAL DA NUTRIÇÃO PODE FAZER VOCÊ
-                TRANSFORMAR A SUA VIDA EM APENAS 3 MESES</h1>
-            <p>Emagreça com a ajuda de um especialista no assunto, sabendo a sua alimentação ideal para atingir os
-                resultados que sempre desejou, sem gastar rios de dinheiro.</p>
-            <p>Tenha um acompanhamento online para um emagrecimento saudável e sustentável, sem efeito sanfona, fazendo
-                o básico que funciona de verdade.</p>
-            <h2 class="mat-headline">Quer a sua Orientação?</h2>
-            <a href="https://link.pagar.me/lHJEBsdDC8" mat-raised-button color="primary">
-                <mat-icon>food_bank</mat-icon> SIM! EU QUERO
-            </a>
+            <div class="row align-items-end">
+                <div class="col-sm-4 col-12">
+                    <picture class="hide-small">
+                        <img src="assets/perfil.png" alt="Cleydson Sobral" width="100%">
+                    </picture>
+                    <picture id="avatar" class="show-small">
+                        <img src="assets/avatar.jpg" alt="Cleydson Sobral" width="57%" class="mat-elevation-z6">
+                    </picture>
+                </div>
+                <div class="col-sm-8 col-12 jumbotron">
+                    <a routerLink="/"><img
+                            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MzEuOTcgMzUuNDkiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojZmZmO30uY2xzLTJ7ZmlsbDojZGY3YjJhO308L3N0eWxlPjwvZGVmcz48dGl0bGU+QXRpdm8gNDwvdGl0bGU+PGcgaWQ9IkNhbWFkYV8yIiBkYXRhLW5hbWU9IkNhbWFkYSAyIj48ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIj48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0wLDE3Ljc0QTE3LDE3LDAsMCwxLDE3LjI0LjMsMTYuMTYsMTYuMTYsMCwwLDEsMzAuNjIsNi42N2wtMi41LDEuOEExMy4xNSwxMy4xNSwwLDAsMCwxNy4xOSwzLjI2QzkuMjcsMy4yNiwzLjQxLDkuNDcsMy40MSwxNy43NHM2LDE0LjQ5LDE0LDE0LjQ5QTE0LDE0LDAsMCwwLDI5LDI2LjU2bDIuNTYsMS44MWExNywxNywwLDAsMS0xNC4yNCw2LjgxQTE2Ljk0LDE2Ljk0LDAsMCwxLDAsMTcuNzRaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMzcuNzQuN0g0MVYzMS44OEg1Ni44NHYyLjlIMzcuNzRaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNjIuOS43SDgzLjQ1VjMuNjFINjYuMTZ2MTdIODEuNnYyLjg2SDY2LjE2djguMzdoMTh2Mi45SDYyLjlaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNODcuODEuN2gzLjYxbDExLDIwLjFMMTEzLjMyLjdoMy40MUwxMDQsMjQuMTFWMzQuNzhoLTMuMzFWMjQuMTFaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTIyLjM5LjdoOC41MmMxMS4yOCwwLDE4LDcsMTgsMTdzLTYuNjcsMTctMTgsMTdoLTguNTJabTguMjIsMzEuMTNjMTAuMDgsMCwxNC44OS01LjgyLDE0Ljg5LTE0LjA5UzE0MC42OSwzLjY2LDEzMC42MSwzLjY2aC01VjMxLjgzWiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTE1NC44NywyNi44N2E5LjY4LDkuNjgsMCwwLDAsOC45Miw1LjM2YzQuNjcsMCw3LjQyLTIuMzEsNy40Mi01Ljg3LDAtMy43NS0yLjMtNS40Ni02LjQxLTcuMzZMMTYyLDE3LjY5Yy00LjkxLTIuMy03Ljg3LTQuNTEtNy44Ny05LjI3UzE1Ny45My4zLDE2Mi45NC4zYzQuMjYsMCw3LjIyLDEuNiw5LjMyLDVsLTIuNSwxLjYxQTcuMjQsNy4yNCwwLDAsMCwxNjMsMy4xNmMtMy4zNiwwLTUuNjEsMi4xNS01LjYxLDUuMTYsMCwzLjI2LDEuODUsNC40Niw2LDYuNDJsMi43NiwxLjNjNS40NiwyLjYsOC4zMiw1LjExLDguMzIsMTAuMjIsMCw1LjYyLTQuMjYsOC45Mi0xMC42Myw4LjkyYTEyLjYyLDEyLjYyLDAsMCwxLTExLjczLTYuODZaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTc4LjU4LDE3Ljc0YTE3LjQ5LDE3LjQ5LDAsMCwxLDM1LDAsMTcuNDksMTcuNDksMCwwLDEtMzUsMFptMzEuNTcsMGMwLTguMjctNi0xNC40OC0xNC4wOC0xNC40OFMxODIsOS40NywxODIsMTcuNzRzNiwxNC40OSwxNC4wOCwxNC40OVMyMTAuMTUsMjYsMjEwLjE1LDE3Ljc0WiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIyMy4wOCw4VjM0Ljc4SDIyMFYwaC4zbDIyLjk1LDI3LjUyVi43aDMuMDZWMzUuNDlIMjQ2WiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTI1OC40OCwyNi44OWE5LjY0LDkuNjQsMCwwLDAsOC45LDUuMzVjNC42NSwwLDcuNC0yLjMsNy40LTUuODUsMC0zLjc1LTIuMy01LjQ1LTYuNC03LjM1bC0yLjc1LTEuM2MtNC45LTIuMy03Ljg1LTQuNS03Ljg1LTkuMjRTMjYxLjUzLjQsMjY2LjUzLjRjNC4yNSwwLDcuMiwxLjYsOS4zLDVMMjczLjMzLDdhNy4yMiw3LjIyLDAsMCwwLTYuNzUtMy43NWMtMy4zNSwwLTUuNiwyLjE1LTUuNiw1LjE1LDAsMy4yNCwxLjg1LDQuNDQsNiw2LjM5bDIuNzUsMS4zYzUuNDUsMi42LDguMyw1LjEsOC4zLDEwLjIsMCw1LjYtNC4yNSw4Ljg5LTEwLjYsOC44OWExMi41OCwxMi41OCwwLDAsMS0xMS43LTYuODRaIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMjgyLjEyLDE3Ljc5YTE3LjQ1LDE3LjQ1LDAsMCwxLDM0Ljg5LDAsMTcuNDUsMTcuNDUsMCwwLDEtMzQuODksMFptMzEuNDksMGMwLTguMjQtNS45NS0xNC40NC0xNC0xNC40NHMtMTQuMDUsNi4yLTE0LjA1LDE0LjQ0LDYsMTQuNDUsMTQuMDUsMTQuNDVTMzEzLjYxLDI2LDMxMy42MSwxNy43OVoiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0zMjMuNDYuOGgxMS4wOWM2LjQsMCw5LjU1LDMuNyw5LjU1LDguMzVhNyw3LDAsMCwxLTQuMzUsNi43OSw4LjkyLDguOTIsMCwwLDEsNy4wNSw5YzAsNS41LTMuNiw5Ljg5LTEwLjk1LDkuODlIMzIzLjQ2Wm0xMS40NCwxNGM0LjMsMCw2LTIuMzUsNi01LjY0LDAtMy4xLTEuODUtNS41LTYuNS01LjVoLTcuNjRWMTQuODRabS42NSwxNy4wNWM1LjY1LDAsNy45NS0zLjA1LDcuOTUtNy4xcy0yLjU1LTcuMi04LjA1LTcuMmgtOC43NHYxNC4zWiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTM3My45NCwzNC43OEgzNzBsLTYuNzUtOC42OWExNi43OCwxNi43OCwwLDAsMS0yLjguMkgzNTYuM3Y4LjQ5aC0zLjI1Vi44aDcuMzljOS4yNSwwLDE0LjA1LDUuNDUsMTQuMDUsMTIuNzksMCw1LjQ1LTIuNyw5LjktNy45NSwxMS43NVptLTEzLjctMTEuMzRjNy43NSwwLDEwLjg1LTQuMTUsMTAuODUtOS44NVMzNjcuOTQsMy43LDM2MC4yNCwzLjdIMzU2LjNWMjMuNDRaIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMzgxLjQ0LDM0Ljc4aC0zLjI1TDM5Mi40OCwwaC4yNWwxNC4zNSwzNC43OGgtMy4zNWwtMi4zNS01Ljg5SDM4My44NFpNMzkyLjYzLDcuMTUsMzg1LDI2aDE1LjE5QzQwMC4yMywyNiwzOTIuNjMsNy4xNSwzOTIuNjMsNy4xNVoiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik00MTIuOTIuOGgzLjI1VjMxLjg5SDQzMnYyLjg5SDQxMi45MloiLz48L2c+PC9nPjwvc3ZnPg=="
+                            alt="Cleydson Sobral" width="auto" height="20"></a>
+                    <h2 class="mat-headline"><span>Nutrição 4x</span> O Programa para Emagrecer com a Alimentação Certa
+                    </h2>
+                    <h1 class="mat-display-3">Descubra como a orientação de um profissional da nutrição pode fazer você
+                        transformar a sua vida em apenas 3 meses</h1>
+                    <p>Emagreça com a ajuda de um especialista no assunto, sabendo a sua alimentação ideal para atingir
+                        os
+                        resultados que sempre desejou, sem gastar rios de dinheiro.</p>
+                    <p>Tenha um acompanhamento online para um emagrecimento saudável e sustentável, sem efeito sanfona,
+                        fazendo
+                        o básico que funciona de verdade.</p>
+                    <h2 class="mat-headline">Quer a sua Orientação?</h2>
+                    <a href="https://link.pagar.me/lHJEBsdDC8" mat-raised-button color="primary"
+                        style="font-size: 24px;">
+                        <mat-icon style="font-size: 32px; height: 36px; width: 36px;">food_bank</mat-icon> SIM! EU QUERO
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </header>
-<main class="container">
-    <div class="row">
-        <div class="col-sm-8">
-            <h1 class="mat-display-1">Quem sou eu?</h1>
-            <p>Meu nome é Cleydson Sobral, sou nutricionista e atuo a mais de 8 anos ajudando pessoas normais, como
-                você, a conseguir alcançar seus objetivos. Sou um especialista no tratamento de obesidade e
-                emagrecimento. Até hoje já ajudei mais de 5 mil pessoas a conquistarem o que sempre sonharam: o
-                emagrecimento sustentável.</p>
-        </div>
-        <div class="col-sm-4">
-            <picture>
-                <source srcset="assets/img/cleydsonsobral.webp" alt="Cleydson Sobral" width="100%"
-                    class="mat-elevation-z4" type="image/webp">
-                <source srcset="assets/img/cleydsonsobral.jpeg" alt="Cleydson Sobral" width="100%"
-                    class="mat-elevation-z4" type="image/jpeg">
-                <img src="assets/img/cleydsonsobral.jpeg" alt="Cleydson Sobral" width="100%" class="mat-elevation-z4">
-            </picture>
+<main class="mat-elevation-z6">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                <h1 class="mat-display-1">Quem sou eu?</h1>
+                <p>Meu nome é Cleydson Sobral, sou nutricionista e atuo a mais de 8 anos ajudando pessoas normais, como
+                    você, a conseguir alcançar seus objetivos. Sou um especialista no tratamento de obesidade e
+                    emagrecimento. Até hoje já ajudei mais de 5 mil pessoas a conquistarem o que sempre sonharam: o
+                    emagrecimento sustentável.</p>
+            </div>
+            <div class="col-sm-3">
+                <picture>
+                    <!-- <source srcset="assets/img/cleydsonsobral.webp" alt="Cleydson Sobral" width="100%"
+                        class="mat-elevation-z4" type="image/webp">
+                    <source srcset="assets/img/cleydsonsobral.jpeg" alt="Cleydson Sobral" width="100%"
+                        class="mat-elevation-z4" type="image/jpeg"> -->
+                    <img src="assets/consultório.jpeg" alt="Cleydson Sobral" width="100%" class="mat-elevation-z4">
+                </picture>
+            </div>
         </div>
     </div>
 </main>
-<section class="mat-elevation-z6">
+<section id="valores">
     <div class="container">
-        <h1 class="mat-display-1">MUITO MAIS QUE UMA CONSULTORIA NUTRICIONAL</h1>
+        <h1 class="mat-display-1">Muito mais que uma consultoria nutricional</h1>
         <p class="mat-h1">Imagina como seria ter o seu físico alinhado com o que você sempre sonhou. <strong>Conseguir
                 vestir aquela roupa que você tanto gosta</strong>, e se sentir melhor em frente ao espelho.</p>
         <p class="mat-h1">Sem precisar cortar aquele cuscuz com ovo no café da manhã, ou aquele arroz com feijão e bife
@@ -49,17 +71,19 @@
         <p class="mat-h1">Imagina como seria <strong>fazer atividades do seu cotidiano sem dificuldades</strong>. Chegar
             na terceira idade completamente saudável, disposto e com energia. Sem precisar gastar uma fortuna com
             médicos e remédios caros.</p>
-        <p class="mat-h1" style="text-align: center;">Isso é possível, e posso te garantir que você pode conquistar os
-            resultados que deseja fazendo uma alimentação básica e natural.</p>
-        <h1 class="mat-display-2">Você quer essa Transformação?</h1>
-        <a href="https://link.pagar.me/lHJEBsdDC8" mat-raised-button>
-            <mat-icon>food_bank</mat-icon> SIM! EU QUERO
-        </a>
+        <div style="text-align: center;">
+            <p class="mat-h1">Isso é possível, e posso te garantir que você pode conquistar os
+                resultados que deseja fazendo uma alimentação básica e natural.</p>
+            <h1 class="mat-display-2">Você quer essa Transformação?</h1>
+            <a href="https://link.pagar.me/lHJEBsdDC8" mat-raised-button style="font-size: 20px;">
+                <mat-icon style="font-size: 28px; height: 32px; width: 32px;">food_bank</mat-icon> SIM! EU QUERO
+            </a>
+        </div>
     </div>
 </section>
-<section class="mat-elevation-z6">
+<section id="acompanhamento" class="mat-elevation-z6">
     <div class="container">
-        <h1 class="mat-display-1">EMAGREÇA COM SAÚDE E COM O ACOMPANHAMENTO DE UM PROFISSIONAL</h1>
+        <h1 class="mat-display-1">Emagreça com saúde e com o acompanhamento de um profissional</h1>
         <ul>
             <li class="mat-headline">Emagreça com saúde e fique <strong>livre do efeito sanfona</strong>.</li>
             <li class="mat-headline">Faça <strong>o básico que funciona</strong> e alcance grandes resultados.</li>
@@ -72,15 +96,17 @@
             <li class="mat-headline"><strong>Transforme o seu bem estar</strong> físico e mental para melhor.</li>
             <li class="mat-headline">Impulsione a sua autoestima e <strong>viva melhor consigo</strong>.</li>
         </ul>
-        <h1 class="mat-display-2">Você pode ter tudo isso agora</h1>
-        <a href="https://link.pagar.me/lHJEBsdDC8" mat-raised-button>
-            <mat-icon>food_bank</mat-icon> Quero Agora
-        </a>
+        <div style="text-align: center;">
+            <h1 class="mat-display-2">Você pode ter tudo isso agora</h1>
+            <a href="https://link.pagar.me/lHJEBsdDC8" mat-raised-button color="accent" style="font-size: 24px;">
+                <mat-icon style="font-size: 32px; height: 36px; width: 36px;">food_bank</mat-icon> Quero Agora
+            </a>
+        </div>
     </div>
 </section>
-<section class="mat-elevation-z6">
+<section id="consultoria" class="mat-elevation-z6">
     <div class="container">
-        <h1 class="mat-display-1">COMO FUNCIONA A CONSULTORIA?</h1>
+        <h1 class="mat-display-1">Como funciona a consultoria?</h1>
         <p class="mat-h1"><strong>Tudo acontecerá de forma online</strong>. Isso significa que você vai poder estar no
             conforto da sua casa e fazer a consultoria comigo. Você vai se cadastrar, efetuar o pagamento, e eu entrarei
             em contato com você <strong>para marcarmos o primeiro encontro</strong>.</p>
@@ -93,16 +119,17 @@
         <p class="mat-h1">Nós teremos contato direto no WhatsApp e você vai poder tirar qualquer dúvida comigo. Eu te
             acompanharei por lá e <strong>vou indicar tudo o que precisa ser feito</strong> passo a passo. <strong>Você
                 não estará sozinho(a)</strong> em nenhum momento.</p>
-
-        <h1 class="mat-display-2">O que acha disso?</h1>
-        <a href="https://link.pagar.me/lHJEBsdDC8" mat-raised-button>
-            <mat-icon>food_bank</mat-icon> QUERO MINHA CONSULTORIA
-        </a>
+        <div style="text-align: center;">
+            <h1 class="mat-display-2">O que acha disso?</h1>
+            <a href="https://link.pagar.me/lHJEBsdDC8" mat-raised-button style="font-size: 20px;">
+                <mat-icon style="font-size: 28px; height: 32px; width: 32px;">food_bank</mat-icon> QUERO MINHA CONSULTORIA
+            </a>
+        </div>
     </div>
 </section>
-<section class="mat-elevation-z6">
+<section class="bg-white">
     <div class="container">
-        <h1 class="mat-display-1">VALOR ESPECIAL DISPONÍVEL</h1>
+        <h1 class="mat-display-1">Valor especial disponível</h1>
         <p class="mat-h1">Aproveite a Consultoria Nutrição 4x para ter o meu acompanhamento pessoal durante 3 meses
             completos e finalmente emagrecer da forma certa.</p>
         <p class="mat-h1">No ato da consulta você me enviará fotos suas demonstrando medidas e seu peso para analisarmos
@@ -114,24 +141,26 @@
         <p class="mat-h1">Nós teremos contato direto no WhatsApp e você vai poder tirar qualquer dúvida comigo. Eu te
             acompanharei por lá e <strong>vou indicar tudo o que precisa ser feito</strong> passo a passo. <strong>Você
                 não estará sozinho(a)</strong> em nenhum momento.</p>
-
-        <h1 class="mat-display-2">Consultoria Nutrição 4x</h1>
-        <p>De: <s>R$ 597,90</s></p>
-        <h2>POR APENAS</h2>
-        <h3><span>3x R$ 134</span> ou R$ 400 à vista</h3>
-        <h2>O que você recebe?</h2>
-        <ul>
-            <li>✅ Acompanhamento Exclusivo por 3 Meses.</li>
-            <li>✅ 1 Consulta Online de Alinhamento.</li>
-            <li>✅ Questionário Especial para Traçar seu Perfil.</li>
-            <li>✅ Definição de um Plano de Ação.</li>
-            <li>✅ Planejamento de Metas Específicas.</li>
-            <li>✅ Contato Direto por WhatsApp e Email.</li>
-        </ul>
-        <h1 class="mat-display-2">Participe Agora</h1>
-        <a href="https://link.pagar.me/lHJEBsdDC8" mat-raised-button>
-            <mat-icon>food_bank</mat-icon> Quero Participar da Consultoria
-        </a>
+        <div style="text-align: center;">
+            <h1 class="mat-display-2">Consultoria Nutrição 4x</h1>
+            <p>De: <s>R$ 540,00</s></p>
+            <h2>POR APENAS</h2>
+            <h3><span>3x R$ 134,00</span> ou <strong>R$ 400,00 à vista</strong></h3>
+            <h2>O que você recebe?</h2>
+            <ul>
+                <li><span class="material-icons">done_outline</span> Acompanhamento Exclusivo por 3 Meses.</li>
+                <li><span class="material-icons">done_outline</span> 1 Consulta Online de Alinhamento.</li>
+                <li><span class="material-icons">done_outline</span> Questionário Especial para Traçar seu Perfil.</li>
+                <li><span class="material-icons">done_outline</span> Definição de um Plano de Ação.</li>
+                <li><span class="material-icons">done_outline</span> Planejamento de Metas Específicas.</li>
+                <li><span class="material-icons">done_outline</span> Contato Direto por WhatsApp e Email.</li>
+            </ul>
+            <h1 class="mat-display-2">Participe Agora</h1>
+            <a href="https://link.pagar.me/lHJEBsdDC8" mat-raised-button color="accent">
+                <mat-icon>food_bank</mat-icon> Quero Participar da
+                Consultoria
+            </a>
+        </div>
     </div>
 </section>
 <article class="container">

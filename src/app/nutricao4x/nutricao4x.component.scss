@@ -1,0 +1,95 @@
+header {
+    background-color: #383b3f;
+    color: white;
+    #avatar {
+        margin-top: 30px;
+        text-align: center;
+        img {
+            border-radius: 120px;
+            border: 3px solid white;
+        }
+    }
+    img {
+        border: 2px;
+        border-color: #fff;
+    }
+}
+.header > div > div > div.jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    h1.mat-display-3 {
+        color: #df7b2a;
+        margin: 20px 0 20px;
+    }
+    h2.mat-headline {
+        margin-top: 20px;
+        span {
+            background-color: #df7b2a;
+            padding-left: 5px;
+            padding-right: 5px;
+            color: white;
+        }
+    }
+    // h2.mat-headline.primary {
+    // }
+}
+.mat-raised-button {
+    border-radius: 40px;
+    padding: 6px 20px;
+    text-transform: uppercase;
+}
+main {
+    padding: 30px 0;
+    // background-color: #383b3f;
+    // color: white;
+}
+section#acompanhamento,
+section.bg-white {
+    padding: 30px 0;
+    h1.mat-display-1,
+    h1.mat-display-2 {
+        color: #df7b2a;
+        margin: 20px 0 30px;
+        font-family: "Barlow", sans-serif;
+    }
+    ul {
+        padding: 0;
+        li {
+            list-style: none;
+            font-size: 24px;
+        }
+    }
+    div > h3 > strong {
+        color: white;
+        background-color: #df7b2a;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+section#valores,
+section#consultoria {
+    background-color: #383b3f;
+    color: white;
+    padding: 30px 0;
+    h1.mat-display-1,
+    h1.mat-display-2 {
+        color: #df7b2a;
+        margin: 20px 0 30px;
+    }
+    strong {
+        background-color: #df7b2a;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+article {
+    h2.mat-title {
+        margin-top: 30px;
+        color: #df7b2a;
+    }
+}
+
+header > div > div > div > div.jumbotron > a:nth-child(1) {
+    display: block;
+    text-align: center;
+}
