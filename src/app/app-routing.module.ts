@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'termos-uso', component: TermosDeUsoComponent },
   { path: 'politica-cancelamento', component: PoliticaDeCancelamentoComponent },
-  { path: 'nutrição4x', component: Nutricao4xComponent }
+  { path: 'nutricao4x', component: Nutricao4xComponent }
 ];
 
 @NgModule({
