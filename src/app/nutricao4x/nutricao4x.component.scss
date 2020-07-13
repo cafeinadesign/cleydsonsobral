@@ -33,6 +33,9 @@ header {
     // h2.mat-headline.primary {
     // }
 }
+h1.mat-display-1 {
+    font-weight: bold;
+}
 .mat-raised-button {
     border-radius: 40px;
     padding: 6px 20px;
@@ -51,6 +54,7 @@ section.bg-white {
         color: #df7b2a;
         margin: 20px 0 30px;
         font-family: "Barlow", sans-serif;
+        font-weight: bold;
     }
     ul {
         padding: 0;
@@ -81,6 +85,24 @@ section#consultoria {
         padding-left: 5px;
         padding-right: 5px;
     }
+    #emagrecimento {
+        height: 260px;
+        max-width: 100%;
+        margin-right: 15px;
+        float: left;
+    }
+    #arroz-feijao {
+        width: 260px;
+        max-width: 100%;
+        margin-right: 15px;
+        float: right;
+    }
+    #idosos {
+        height: 180px;
+        max-width: 100%;
+        margin-right: 15px;
+        float: left;
+    }
 }
 article {
     h2.mat-title {
@@ -107,5 +129,16 @@ article {
         font-family: "Barlow", sans-serif;
         font-size: 20px;
         line-height: normal;
+    }
+    article p {
+        font-size: 15px;
+    }
+    section#valores {
+        img#emagrecimento,
+        img#arroz-feijao,
+        img#idosos {
+            max-width: 33%;
+            height: auto;
+        }
     }
 }
