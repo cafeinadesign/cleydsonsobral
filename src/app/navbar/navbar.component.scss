@@ -5,6 +5,13 @@ mat-toolbar {
     flex-grow: 1;
 }
 
+.show-small {
+  display: none;
+}
+.hide-small {
+  display: block;
+}
+
 /**
   * Rules for when the device is detected to be a small screen.
   */
