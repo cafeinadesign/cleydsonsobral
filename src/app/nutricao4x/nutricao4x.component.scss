@@ -51,15 +51,16 @@ section.bg-white {
     padding: 30px 0;
     h1.mat-display-1,
     h1.mat-display-2 {
+        text-align: center;
         color: #df7b2a;
         margin: 20px 0 30px;
-        font-family: "Barlow", sans-serif;
-        font-weight: bold;
+        font-family: "Archivo", sans-serif;
     }
     ul {
-        padding: 0;
+        margin-left: 30px;
+        // padding: 0;
         li {
-            list-style: none;
+            // list-style: none;
             font-size: 24px;
         }
     }
@@ -79,6 +80,7 @@ section#consultoria {
     h1.mat-display-2 {
         color: #df7b2a;
         margin: 20px 0 30px;
+        text-align: center;
     }
     strong {
         background-color: #df7b2a;
@@ -98,10 +100,25 @@ section#consultoria {
         float: right;
     }
     #idosos {
-        height: 180px;
+        height: 240px;
         max-width: 100%;
         margin-right: 15px;
         float: left;
+    }
+}
+#provasocial {
+    h1.mat-display-1 {
+        margin: 30px 0;
+    }
+    img {
+        max-width: 100%;
+    }
+    padding-bottom: 30px;
+}
+#valor {
+    ul {
+        max-width: 500px;
+        margin: 0 auto;
     }
 }
 article {
@@ -139,6 +156,12 @@ article {
         img#idosos {
             max-width: 33%;
             height: auto;
+        }
+    }
+    section#acompanhamento,
+    section.bg-white {
+        ul {
+            margin-left: 0;
         }
     }
 }
