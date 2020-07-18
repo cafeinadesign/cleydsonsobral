@@ -144,6 +144,9 @@ article {
     * Rules for when the device is detected to be a small screen.
     */
 @media (max-width: 720px) {
+    header {
+        text-align: center;
+    }
     header > div > div > div > div.jumbotron > a:nth-child(1) {
         display: block;
         text-align: center;
