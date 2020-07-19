@@ -1,3 +1,8 @@
+p,
+a,
+button {
+    font-family: "Barlow", sans-serif;
+}
 header {
     background-image: url("../../assets/arroz-feijao.jpg");
     background-position: center center;
@@ -6,11 +11,19 @@ header {
     div.header {
         padding: 60px 0;
         background: rgb(0, 0, 0);
-        background: linear-gradient(102deg, rgba(0, 0, 0, 0.50) 50%, rgba(0, 0, 0, 0) 82%);
+        background: linear-gradient(102deg, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 82%);
         background-position: bottom center;
     }
-    h1.mat-display-3,
+    h1.mat-display-3 {
+        font-family: "Archivo", sans-serif;
+    }
+    h3.mat-subheading-2,
     h2.mat-headline {
+        font-family: "Barlow", sans-serif;
+    }
+    h1.mat-display-3,
+    h2.mat-headline,
+    h3.mat-subheading-2 {
         color: #fff;
         text-shadow: 2px 2px 8px #000;
     }
@@ -21,6 +34,10 @@ header {
     h2.mat-headline {
         font-weight: 300;
         margin-bottom: 40px;
+    }
+    .mat-button {
+        color: white;
+        margin-left: 15px;
     }
 }
 .mat-raised-button {
@@ -35,30 +52,35 @@ main {
         color: #383b3f;
         font-weight: normal;
     }
+    #fotoperfil {
+        padding-top: 120px;
+    }
+    padding-bottom: 30px;
 }
-
 section {
-    text-align: center;
+    padding: 30px 0;
+}
+section#missao,
+section#valor {
     background-color: #383b3f;
     color: #fff;
-    padding: 20px 0;
-    margin: 20px 0;
     ul {
-        list-style: none;
         padding-inline-start: 0;
     }
     h1.mat-display-1 {
+        font-family: "Archivo", sans-serif;
         color: #df7b2a;
-        font-weight: 300;
-        margin: 0;
+        margin: 0 0 30px;
+        text-align: center;
     }
     h1.mat-display-2 {
+        font-family: "Archivo", sans-serif;
         color: #df7b2a;
         margin: 20px 0 26px;
-        font-weight: 300;
+        text-align: center;
     }
     p.mat-h1 {
-        font-weight: 300;
+        font-family: "Barlow", sans-serif;
         strong {
             background-color: #df7b2a;
             padding-left: 5px;
@@ -68,6 +90,37 @@ section {
     a {
         margin-bottom: 20px;
     }
+}
+
+section#nutricao4x {
+    h1.mat-display-1 {
+        font-family: "Archivo", sans-serif;
+        margin: 0 0 30px;
+        text-align: center;
+    }
+}
+
+main#agendar {
+    background-image: url("../../assets/saude.jpg");
+    background-size: cover;
+    padding: 0;
+    background-attachment: fixed;
+    h1.mat-display-1 {
+        font-family: "Archivo", sans-serif;
+        color: white;
+        margin: 0 0 30px;
+        text-align: left;
+        font-weight: bold;
+        width: 66%;
+    }
+    a.mat-button {
+        color: white;
+    }
+}
+
+main#agendar > div {
+    background: linear-gradient(102deg, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 82%);
+    padding: 60px 0;
 }
 
 .mat-expansion-panel-header-title {
@@ -85,13 +138,16 @@ section {
         background-position-y: bottom;
         div.header {
             background: rgb(0, 0, 0);
-            background: linear-gradient(120deg, rgba(0, 0, 0, 0.50) 62%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(120deg, rgba(0, 0, 0, 0.5) 62%, rgba(0, 0, 0, 0) 100%);
         }
     }
     main {
         h1.mat-display-1 {
             color: #df7b2a;
             margin: 0 0 10px;
+        }
+        #fotoperfil {
+            padding-top: 0;
         }
     }
 }
