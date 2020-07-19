@@ -16,6 +16,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { TermosDeUsoComponent } from './termos-de-uso/termos-de-uso.component';
 import { PoliticaDeCancelamentoComponent } from './politica-de-cancelamento/politica-de-cancelamento.component';
 import { Nutricao4xComponent } from './nutricao4x/nutricao4x.component';
+import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { Nutricao4xComponent } from './nutricao4x/nutricao4x.component';
     HomepageComponent,
     TermosDeUsoComponent,
     PoliticaDeCancelamentoComponent,
-    Nutricao4xComponent
+    Nutricao4xComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
