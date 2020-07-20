@@ -69,23 +69,16 @@ section#valor {
     }
     h1.mat-display-1 {
         font-family: "Archivo", sans-serif;
-        color: #df7b2a;
         margin: 0 0 30px;
         text-align: center;
     }
-    h1.mat-display-2 {
+    h2.mat-headline {
         font-family: "Archivo", sans-serif;
-        color: #df7b2a;
         margin: 20px 0 26px;
         text-align: center;
     }
-    p.mat-h1 {
+    p.mat-title {
         font-family: "Barlow", sans-serif;
-        strong {
-            background-color: #df7b2a;
-            padding-left: 5px;
-            padding-right: 5px;
-        }
     }
     a {
         margin-bottom: 20px;
