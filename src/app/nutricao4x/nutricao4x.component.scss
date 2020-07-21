@@ -1,5 +1,5 @@
 header {
-    background-color: #383b3f;
+    background-color: #000;
     color: white;
     #avatar {
         margin: 20px 0 20px;
@@ -137,7 +137,7 @@ section#valor {
         margin: 0 auto;
     }
     img {
-        max-width: 480px;
+        width: 100%;
     }
 }
 
@@ -147,7 +147,7 @@ section#valor {
 @media (max-width: 720px) {
     header {
         text-align: center;
-        background-color: black;
+        // background-color: black;
     }
     header > div > div > div > div.jumbotron > a:nth-child(1) {
         display: block;
@@ -157,7 +157,6 @@ section#valor {
         h1.mat-display-3 {
             font-size: 30px;
             line-height: 36px;
-            font-weight: bold;
         }
         h2.mat-headline {
             font-size: 20px;
