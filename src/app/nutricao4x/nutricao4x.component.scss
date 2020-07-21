@@ -1,5 +1,5 @@
 header {
-    background-color: #000;
+    background-color: black;
     color: white;
     #avatar {
         margin: 20px 0 20px;
@@ -67,8 +67,6 @@ section.bg-white {
             font-family: "Barlow", sans-serif;
             font-size: 24px;
             strong {
-                background-color: black;
-                color: white;
                 font-weight: 900;
             }
         }
@@ -82,7 +80,7 @@ section.bg-white {
 }
 section#valores,
 section#consultoria {
-    background-color: #000;
+    background-color: #383b3f;
     color: white;
     padding: 30px 0;
     h1.mat-display-1{
