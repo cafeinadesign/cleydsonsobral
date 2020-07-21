@@ -43,6 +43,12 @@ main {
     padding: 30px 0;
     // background-color: #383b3f;
     // color: white;
+    h1.mat-display-1 {
+        text-align: center;
+    }
+    p {
+        text-align: justify;
+    }
 }
 section#acompanhamento,
 section.bg-white {
@@ -141,6 +147,7 @@ section#valor {
 @media (max-width: 720px) {
     header {
         text-align: center;
+        background-color: black;
     }
     header > div > div > div > div.jumbotron > a:nth-child(1) {
         display: block;
@@ -150,6 +157,7 @@ section#valor {
         h1.mat-display-3 {
             font-size: 30px;
             line-height: 36px;
+            font-weight: bold;
         }
         h2.mat-headline {
             font-size: 20px;
