@@ -46,6 +46,14 @@ main {
     h1.mat-display-1 {
         text-align: center;
     }
+    p.hyphenate {
+        font-size: 24px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+    }
 }
 section#acompanhamento,
 section.bg-white {
