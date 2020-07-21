@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import 'bootstrap/js/dist/carousel';
+import bootstrap from 'bootstrap/js/dist/carousel';
 
 @Component({
   selector: 'app-nutricao4x',
