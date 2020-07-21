@@ -3,6 +3,10 @@ footer {
     background-color: #383b3f;
     color: #fff;
     text-align: center;
+    p.small {
+        line-height: 12px;
+        text-align: justify;
+    }
     a {
         color: #df7b2a;
     }
