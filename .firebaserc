@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cleydson-sobral": {
+      "hosting": {
+        "cleydsonsobral": [
+          "cleydson-sobral"
+        ]
+      }
+    }
+  }
+}
