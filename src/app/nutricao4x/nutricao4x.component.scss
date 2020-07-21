@@ -30,8 +30,6 @@ header {
             color: white;
         }
     }
-    // h2.mat-headline.primary {
-    // }
 }
 h1.mat-display-1 {
     font-weight: bold;
@@ -150,8 +148,11 @@ section#valor {
     }
     .header > div > div > div.jumbotron {
         h1.mat-display-3 {
-            font-size: 34px;
-            line-height: 48px;
+            font-size: 30px;
+            line-height: 36px;
+        }
+        h2.mat-headline {
+            font-size: 20px;
         }
     }
     p {
