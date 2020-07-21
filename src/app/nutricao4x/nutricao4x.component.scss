@@ -46,6 +46,10 @@ main {
     h1.mat-display-1 {
         text-align: center;
     }
+    p.mat-body {
+        font-size: 20px;
+        font-family: "Barlow";
+    }
 }
 section#acompanhamento,
 section.bg-white {
@@ -59,10 +63,12 @@ section.bg-white {
     }
     ul {
         margin-left: 30px;
-        // padding: 0;
         li {
-            // list-style: none;
+            font-family: "Barlow", sans-serif;
             font-size: 24px;
+            strong {
+                font-weight: 900;
+            }
         }
     }
     div > h3 > strong {
