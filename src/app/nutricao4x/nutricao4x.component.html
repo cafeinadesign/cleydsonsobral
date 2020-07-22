@@ -1,218 +1,372 @@
 <header class="mat-elevation-z6">
-    <div class="header">
-        <div class="container">
-            <div class="row align-items-end">
-                <div class="col-sm-4 col-12">
-                    <picture id="perfil" class="hide-small">
-                        <img src="assets/perfil.png" alt="Cleydson Sobral" width="100%">
-                    </picture>
-                </div>
-                <div class="col-sm-8 col-12 jumbotron">
-                    <a routerLink="/"><img
-                            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MzEuOTcgMzUuNDkiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojZmZmO30uY2xzLTJ7ZmlsbDojZGY3YjJhO308L3N0eWxlPjwvZGVmcz48dGl0bGU+QXRpdm8gNDwvdGl0bGU+PGcgaWQ9IkNhbWFkYV8yIiBkYXRhLW5hbWU9IkNhbWFkYSAyIj48ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIj48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0wLDE3Ljc0QTE3LDE3LDAsMCwxLDE3LjI0LjMsMTYuMTYsMTYuMTYsMCwwLDEsMzAuNjIsNi42N2wtMi41LDEuOEExMy4xNSwxMy4xNSwwLDAsMCwxNy4xOSwzLjI2QzkuMjcsMy4yNiwzLjQxLDkuNDcsMy40MSwxNy43NHM2LDE0LjQ5LDE0LDE0LjQ5QTE0LDE0LDAsMCwwLDI5LDI2LjU2bDIuNTYsMS44MWExNywxNywwLDAsMS0xNC4yNCw2LjgxQTE2Ljk0LDE2Ljk0LDAsMCwxLDAsMTcuNzRaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMzcuNzQuN0g0MVYzMS44OEg1Ni44NHYyLjlIMzcuNzRaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNjIuOS43SDgzLjQ1VjMuNjFINjYuMTZ2MTdIODEuNnYyLjg2SDY2LjE2djguMzdoMTh2Mi45SDYyLjlaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNODcuODEuN2gzLjYxbDExLDIwLjFMMTEzLjMyLjdoMy40MUwxMDQsMjQuMTFWMzQuNzhoLTMuMzFWMjQuMTFaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTIyLjM5LjdoOC41MmMxMS4yOCwwLDE4LDcsMTgsMTdzLTYuNjcsMTctMTgsMTdoLTguNTJabTguMjIsMzEuMTNjMTAuMDgsMCwxNC44OS01LjgyLDE0Ljg5LTE0LjA5UzE0MC42OSwzLjY2LDEzMC42MSwzLjY2aC01VjMxLjgzWiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTE1NC44NywyNi44N2E5LjY4LDkuNjgsMCwwLDAsOC45Miw1LjM2YzQuNjcsMCw3LjQyLTIuMzEsNy40Mi01Ljg3LDAtMy43NS0yLjMtNS40Ni02LjQxLTcuMzZMMTYyLDE3LjY5Yy00LjkxLTIuMy03Ljg3LTQuNTEtNy44Ny05LjI3UzE1Ny45My4zLDE2Mi45NC4zYzQuMjYsMCw3LjIyLDEuNiw5LjMyLDVsLTIuNSwxLjYxQTcuMjQsNy4yNCwwLDAsMCwxNjMsMy4xNmMtMy4zNiwwLTUuNjEsMi4xNS01LjYxLDUuMTYsMCwzLjI2LDEuODUsNC40Niw2LDYuNDJsMi43NiwxLjNjNS40NiwyLjYsOC4zMiw1LjExLDguMzIsMTAuMjIsMCw1LjYyLTQuMjYsOC45Mi0xMC42Myw4LjkyYTEyLjYyLDEyLjYyLDAsMCwxLTExLjczLTYuODZaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTc4LjU4LDE3Ljc0YTE3LjQ5LDE3LjQ5LDAsMCwxLDM1LDAsMTcuNDksMTcuNDksMCwwLDEtMzUsMFptMzEuNTcsMGMwLTguMjctNi0xNC40OC0xNC4wOC0xNC40OFMxODIsOS40NywxODIsMTcuNzRzNiwxNC40OSwxNC4wOCwxNC40OVMyMTAuMTUsMjYsMjEwLjE1LDE3Ljc0WiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIyMy4wOCw4VjM0Ljc4SDIyMFYwaC4zbDIyLjk1LDI3LjUyVi43aDMuMDZWMzUuNDlIMjQ2WiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTI1OC40OCwyNi44OWE5LjY0LDkuNjQsMCwwLDAsOC45LDUuMzVjNC42NSwwLDcuNC0yLjMsNy40LTUuODUsMC0zLjc1LTIuMy01LjQ1LTYuNC03LjM1bC0yLjc1LTEuM2MtNC45LTIuMy03Ljg1LTQuNS03Ljg1LTkuMjRTMjYxLjUzLjQsMjY2LjUzLjRjNC4yNSwwLDcuMiwxLjYsOS4zLDVMMjczLjMzLDdhNy4yMiw3LjIyLDAsMCwwLTYuNzUtMy43NWMtMy4zNSwwLTUuNiwyLjE1LTUuNiw1LjE1LDAsMy4yNCwxLjg1LDQuNDQsNiw2LjM5bDIuNzUsMS4zYzUuNDUsMi42LDguMyw1LjEsOC4zLDEwLjIsMCw1LjYtNC4yNSw4Ljg5LTEwLjYsOC44OWExMi41OCwxMi41OCwwLDAsMS0xMS43LTYuODRaIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMjgyLjEyLDE3Ljc5YTE3LjQ1LDE3LjQ1LDAsMCwxLDM0Ljg5LDAsMTcuNDUsMTcuNDUsMCwwLDEtMzQuODksMFptMzEuNDksMGMwLTguMjQtNS45NS0xNC40NC0xNC0xNC40NHMtMTQuMDUsNi4yLTE0LjA1LDE0LjQ0LDYsMTQuNDUsMTQuMDUsMTQuNDVTMzEzLjYxLDI2LDMxMy42MSwxNy43OVoiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0zMjMuNDYuOGgxMS4wOWM2LjQsMCw5LjU1LDMuNyw5LjU1LDguMzVhNyw3LDAsMCwxLTQuMzUsNi43OSw4LjkyLDguOTIsMCwwLDEsNy4wNSw5YzAsNS41LTMuNiw5Ljg5LTEwLjk1LDkuODlIMzIzLjQ2Wm0xMS40NCwxNGM0LjMsMCw2LTIuMzUsNi01LjY0LDAtMy4xLTEuODUtNS41LTYuNS01LjVoLTcuNjRWMTQuODRabS42NSwxNy4wNWM1LjY1LDAsNy45NS0zLjA1LDcuOTUtNy4xcy0yLjU1LTcuMi04LjA1LTcuMmgtOC43NHYxNC4zWiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTM3My45NCwzNC43OEgzNzBsLTYuNzUtOC42OWExNi43OCwxNi43OCwwLDAsMS0yLjguMkgzNTYuM3Y4LjQ5aC0zLjI1Vi44aDcuMzljOS4yNSwwLDE0LjA1LDUuNDUsMTQuMDUsMTIuNzksMCw1LjQ1LTIuNyw5LjktNy45NSwxMS43NVptLTEzLjctMTEuMzRjNy43NSwwLDEwLjg1LTQuMTUsMTAuODUtOS44NVMzNjcuOTQsMy43LDM2MC4yNCwzLjdIMzU2LjNWMjMuNDRaIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMzgxLjQ0LDM0Ljc4aC0zLjI1TDM5Mi40OCwwaC4yNWwxNC4zNSwzNC43OGgtMy4zNWwtMi4zNS01Ljg5SDM4My44NFpNMzkyLjYzLDcuMTUsMzg1LDI2aDE1LjE5QzQwMC4yMywyNiwzOTIuNjMsNy4xNSwzOTIuNjMsNy4xNVoiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik00MTIuOTIuOGgzLjI1VjMxLjg5SDQzMnYyLjg5SDQxMi45MloiLz48L2c+PC9nPjwvc3ZnPg=="
-                            alt="Cleydson Sobral" width="auto" height="20"></a>
-                    <h2 class="mat-headline">
-                        <span>Nutrição 4x</span> O Programa para Emagrecer com a Alimentação Certa
-                    </h2>
-                    <picture id="avatar" class="show-small">
-                        <img src="assets/consulta-nutricional-on-line.png" alt="Cleydson Sobral" width="100%">
-                    </picture>
-                    <h1 class="mat-display-3">Descubra como a orientação de um profissional da nutrição pode fazer você
-                        transformar a sua vida em apenas 3 meses</h1>
-                    <p>Emagreça com a ajuda de um especialista no assunto, sabendo a sua alimentação ideal para atingir
-                        os
-                        resultados que sempre desejou, sem gastar rios de dinheiro.</p>
-                    <p>Tenha um acompanhamento online para um emagrecimento saudável e sustentável, sem efeito sanfona,
-                        fazendo
-                        o básico que funciona de verdade.</p>
-                    <h2 class="mat-headline">Quer a sua Orientação?</h2>
-                    <a href="https://link.pagar.me/lHJEBsdDC8" mat-raised-button color="primary"
-                        style="font-size: 24px;">
-                        <mat-icon style="font-size: 32px; height: 36px; width: 36px;">food_bank</mat-icon> SIM! EU QUERO
-                    </a>
-                </div>
-            </div>
+  <div class="header">
+    <div class="container">
+      <div class="row align-items-end">
+        <div class="col-sm-4 col-12">
+          <picture id="perfil" class="hide-small">
+            <img src="assets/perfil.png" alt="Cleydson Sobral" width="100%" />
+          </picture>
         </div>
+        <div class="col-sm-8 col-12 jumbotron">
+          <a routerLink="/"
+            ><img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MzEuOTcgMzUuNDkiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojZmZmO30uY2xzLTJ7ZmlsbDojZGY3YjJhO308L3N0eWxlPjwvZGVmcz48dGl0bGU+QXRpdm8gNDwvdGl0bGU+PGcgaWQ9IkNhbWFkYV8yIiBkYXRhLW5hbWU9IkNhbWFkYSAyIj48ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIj48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0wLDE3Ljc0QTE3LDE3LDAsMCwxLDE3LjI0LjMsMTYuMTYsMTYuMTYsMCwwLDEsMzAuNjIsNi42N2wtMi41LDEuOEExMy4xNSwxMy4xNSwwLDAsMCwxNy4xOSwzLjI2QzkuMjcsMy4yNiwzLjQxLDkuNDcsMy40MSwxNy43NHM2LDE0LjQ5LDE0LDE0LjQ5QTE0LDE0LDAsMCwwLDI5LDI2LjU2bDIuNTYsMS44MWExNywxNywwLDAsMS0xNC4yNCw2LjgxQTE2Ljk0LDE2Ljk0LDAsMCwxLDAsMTcuNzRaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMzcuNzQuN0g0MVYzMS44OEg1Ni44NHYyLjlIMzcuNzRaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNjIuOS43SDgzLjQ1VjMuNjFINjYuMTZ2MTdIODEuNnYyLjg2SDY2LjE2djguMzdoMTh2Mi45SDYyLjlaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNODcuODEuN2gzLjYxbDExLDIwLjFMMTEzLjMyLjdoMy40MUwxMDQsMjQuMTFWMzQuNzhoLTMuMzFWMjQuMTFaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTIyLjM5LjdoOC41MmMxMS4yOCwwLDE4LDcsMTgsMTdzLTYuNjcsMTctMTgsMTdoLTguNTJabTguMjIsMzEuMTNjMTAuMDgsMCwxNC44OS01LjgyLDE0Ljg5LTE0LjA5UzE0MC42OSwzLjY2LDEzMC42MSwzLjY2aC01VjMxLjgzWiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTE1NC44NywyNi44N2E5LjY4LDkuNjgsMCwwLDAsOC45Miw1LjM2YzQuNjcsMCw3LjQyLTIuMzEsNy40Mi01Ljg3LDAtMy43NS0yLjMtNS40Ni02LjQxLTcuMzZMMTYyLDE3LjY5Yy00LjkxLTIuMy03Ljg3LTQuNTEtNy44Ny05LjI3UzE1Ny45My4zLDE2Mi45NC4zYzQuMjYsMCw3LjIyLDEuNiw5LjMyLDVsLTIuNSwxLjYxQTcuMjQsNy4yNCwwLDAsMCwxNjMsMy4xNmMtMy4zNiwwLTUuNjEsMi4xNS01LjYxLDUuMTYsMCwzLjI2LDEuODUsNC40Niw2LDYuNDJsMi43NiwxLjNjNS40NiwyLjYsOC4zMiw1LjExLDguMzIsMTAuMjIsMCw1LjYyLTQuMjYsOC45Mi0xMC42Myw4LjkyYTEyLjYyLDEyLjYyLDAsMCwxLTExLjczLTYuODZaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTc4LjU4LDE3Ljc0YTE3LjQ5LDE3LjQ5LDAsMCwxLDM1LDAsMTcuNDksMTcuNDksMCwwLDEtMzUsMFptMzEuNTcsMGMwLTguMjctNi0xNC40OC0xNC4wOC0xNC40OFMxODIsOS40NywxODIsMTcuNzRzNiwxNC40OSwxNC4wOCwxNC40OVMyMTAuMTUsMjYsMjEwLjE1LDE3Ljc0WiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIyMy4wOCw4VjM0Ljc4SDIyMFYwaC4zbDIyLjk1LDI3LjUyVi43aDMuMDZWMzUuNDlIMjQ2WiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTI1OC40OCwyNi44OWE5LjY0LDkuNjQsMCwwLDAsOC45LDUuMzVjNC42NSwwLDcuNC0yLjMsNy40LTUuODUsMC0zLjc1LTIuMy01LjQ1LTYuNC03LjM1bC0yLjc1LTEuM2MtNC45LTIuMy03Ljg1LTQuNS03Ljg1LTkuMjRTMjYxLjUzLjQsMjY2LjUzLjRjNC4yNSwwLDcuMiwxLjYsOS4zLDVMMjczLjMzLDdhNy4yMiw3LjIyLDAsMCwwLTYuNzUtMy43NWMtMy4zNSwwLTUuNiwyLjE1LTUuNiw1LjE1LDAsMy4yNCwxLjg1LDQuNDQsNiw2LjM5bDIuNzUsMS4zYzUuNDUsMi42LDguMyw1LjEsOC4zLDEwLjIsMCw1LjYtNC4yNSw4Ljg5LTEwLjYsOC44OWExMi41OCwxMi41OCwwLDAsMS0xMS43LTYuODRaIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMjgyLjEyLDE3Ljc5YTE3LjQ1LDE3LjQ1LDAsMCwxLDM0Ljg5LDAsMTcuNDUsMTcuNDUsMCwwLDEtMzQuODksMFptMzEuNDksMGMwLTguMjQtNS45NS0xNC40NC0xNC0xNC40NHMtMTQuMDUsNi4yLTE0LjA1LDE0LjQ0LDYsMTQuNDUsMTQuMDUsMTQuNDVTMzEzLjYxLDI2LDMxMy42MSwxNy43OVoiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0zMjMuNDYuOGgxMS4wOWM2LjQsMCw5LjU1LDMuNyw5LjU1LDguMzVhNyw3LDAsMCwxLTQuMzUsNi43OSw4LjkyLDguOTIsMCwwLDEsNy4wNSw5YzAsNS41LTMuNiw5Ljg5LTEwLjk1LDkuODlIMzIzLjQ2Wm0xMS40NCwxNGM0LjMsMCw2LTIuMzUsNi01LjY0LDAtMy4xLTEuODUtNS41LTYuNS01LjVoLTcuNjRWMTQuODRabS42NSwxNy4wNWM1LjY1LDAsNy45NS0zLjA1LDcuOTUtNy4xcy0yLjU1LTcuMi04LjA1LTcuMmgtOC43NHYxNC4zWiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTM3My45NCwzNC43OEgzNzBsLTYuNzUtOC42OWExNi43OCwxNi43OCwwLDAsMS0yLjguMkgzNTYuM3Y4LjQ5aC0zLjI1Vi44aDcuMzljOS4yNSwwLDE0LjA1LDUuNDUsMTQuMDUsMTIuNzksMCw1LjQ1LTIuNyw5LjktNy45NSwxMS43NVptLTEzLjctMTEuMzRjNy43NSwwLDEwLjg1LTQuMTUsMTAuODUtOS44NVMzNjcuOTQsMy43LDM2MC4yNCwzLjdIMzU2LjNWMjMuNDRaIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMzgxLjQ0LDM0Ljc4aC0zLjI1TDM5Mi40OCwwaC4yNWwxNC4zNSwzNC43OGgtMy4zNWwtMi4zNS01Ljg5SDM4My44NFpNMzkyLjYzLDcuMTUsMzg1LDI2aDE1LjE5QzQwMC4yMywyNiwzOTIuNjMsNy4xNSwzOTIuNjMsNy4xNVoiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik00MTIuOTIuOGgzLjI1VjMxLjg5SDQzMnYyLjg5SDQxMi45MloiLz48L2c+PC9nPjwvc3ZnPg=="
+              alt="Cleydson Sobral"
+              width="auto"
+              height="20"
+          /></a>
+
+          <h2 class="mat-headline">
+            <span>Nutrição 4x</span> O Programa para Emagrecer com a Alimentação
+            Certa
+          </h2>
+          <picture id="avatar" class="show-small">
+            <img
+              src="assets/consulta-nutricional-on-line.png"
+              alt="Cleydson Sobral"
+              width="100%"
+            />
+          </picture>
+          <h1 class="mat-display-3">
+            Descubra como a orientação de um profissional da nutrição pode fazer
+            você transformar a sua vida em apenas 3 meses
+          </h1>
+          <p>
+            Emagreça com a ajuda de um especialista no assunto, sabendo a sua
+            alimentação ideal para atingir os resultados que sempre desejou, sem
+            gastar rios de dinheiro.
+          </p>
+          <p>
+            Tenha um acompanhamento online para um emagrecimento saudável e
+            sustentável, sem efeito sanfona, fazendo o básico que funciona de
+            verdade.
+          </p>
+          <h2 class="mat-headline">Quer a sua Orientação?</h2>
+          <a
+            href="https://link.pagar.me/lr14R50HlP"
+            mat-raised-button
+            color="primary"
+            style="font-size: 24px;"
+          >
+            <mat-icon style="font-size: 32px; height: 36px; width: 36px;"
+              >food_bank</mat-icon
+            >
+            SIM! EU QUERO
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 </header>
 <main class="mat-elevation-z6">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-9">
-                <h1 class="mat-display-1" style="margin-bottom: 30px;">Quem sou eu?</h1>
-                <p class="mat-body">Sou Cleydson Sobral, atuo como nutricionista há mais de 8 anos ajudando pessoas
-                    normais, como
-                    você, a conseguir alcançar seus objetivos. Sou um especialista no tratamento de obesidade e
-                    emagrecimento. Até hoje já ajudei mais de 5 mil pessoas a conquistarem o que sempre sonharam: o
-                    emagrecimento sustentável.</p>
-            </div>
-            <div class="col-sm-3">
-                <picture>
-                    <!-- <source srcset="assets/img/cleydsonsobral.webp" alt="Cleydson Sobral" width="100%"
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9">
+        <h1 class="mat-display-1" style="margin-bottom: 30px;">Quem sou eu?</h1>
+        <p class="mat-body">
+          Sou Cleydson Sobral, atuo como nutricionista há mais de 8 anos
+          ajudando pessoas normais, como você, a conseguir alcançar seus
+          objetivos. Sou um especialista no tratamento de obesidade e
+          emagrecimento. Até hoje já ajudei mais de 5 mil pessoas a conquistarem
+          o que sempre sonharam: o emagrecimento sustentável.
+        </p>
+      </div>
+      <div class="col-sm-3">
+        <picture>
+          <!-- <source srcset="assets/img/cleydsonsobral.webp" alt="Cleydson Sobral" width="100%"
                         class="mat-elevation-z4" type="image/webp">
                     <source srcset="assets/img/cleydsonsobral.jpeg" alt="Cleydson Sobral" width="100%"
                         class="mat-elevation-z4" type="image/jpeg"> -->
-                    <img src="assets/consultório.jpeg" alt="Cleydson Sobral" width="100%" class="mat-elevation-z4">
-                </picture>
-            </div>
-        </div>
+          <img
+            src="assets/consultório.jpeg"
+            alt="Cleydson Sobral"
+            width="100%"
+            class="mat-elevation-z4"
+          />
+        </picture>
+      </div>
     </div>
+  </div>
 </main>
 <section id="valores">
-    <div class="container">
-        <h1 class="mat-display-1">Muito mais que uma consulta nutricional</h1>
-        <p class="mat-h1"><img src="assets/emagrecimento.jpeg" id="emagrecimento" alt="Emagrecer"
-                class="mat-elevation-z6"> Imagina como seria ter o seu físico alinhado com o que você sempre sonhou.
-            <strong>Conseguir vestir aquela roupa que você tanto gosta</strong>, e se sentir melhor em frente ao
-            espelho.</p>
-        <p class="mat-h1">Pensa em como seria se você não sofresse efeito sanfona. Mantendo uma alimentação sustentável,
-            sem gastar dinheiro com suplementos desnecessários ou alimentos da moda.
-            Melhorando sua saúde, sono e controle emocional.</p>
-        <p class="mat-h1"><img src="assets/arroz-feijão.jpg" id="arroz-feijao" alt="Emagrecer"
-                class="mat-elevation-z6">Sem precisar cortar aquele cuscuz com ovo no café da manhã, ou aquele
-            <strong>arroz com
-                feijão e bife</strong> que você tanto gosta.</p>
-        <p class="mat-h1">Sem precisar fazer dietas restritivas que te deixam desanimado e sem força de vontade, mesmo
-            antes de começar.</p>
-        <p class="mat-h1"><img src="assets/idosos.jpg" id="idosos" alt="Emagrecer" class="mat-elevation-z6"> Imagina
-            como seria <strong>fazer atividades do seu cotidiano sem dificuldades</strong>. Chegar na terceira idade
-            completamente saudável, disposto e com energia. Sem precisar gastar uma fortuna
-            com médicos e remédios caros.</p>
-        <div style="text-align: center;">
-            <p class="mat-h1" style="clear: both;">Isso é possível, e posso te garantir que você pode
-                conquistar os
-                resultados que deseja fazendo uma alimentação básica e natural.</p>
-            <h1 class="mat-display-2" style="font-weight: normal;">Você quer essa Transformação?</h1>
-            <a href="https://link.pagar.me/lHJEBsdDC8" mat-raised-button style="font-size: 20px;">
-                <mat-icon style="font-size: 28px; height: 32px; width: 32px;">food_bank</mat-icon> SIM! EU QUERO
-            </a>
-        </div>
+  <div class="container">
+    <h1 class="mat-display-1">Muito mais que uma consulta nutricional</h1>
+    <p class="mat-h1">
+      <img
+        src="assets/emagrecimento.jpeg"
+        id="emagrecimento"
+        alt="Emagrecer"
+        class="mat-elevation-z6"
+      />
+      Imagina como seria ter o seu físico alinhado com o que você sempre sonhou.
+      <strong>Conseguir vestir aquela roupa que você tanto gosta</strong>, e se
+      sentir melhor em frente ao espelho.
+    </p>
+    <p class="mat-h1">
+      Pensa em como seria se você não sofresse efeito sanfona. Mantendo uma
+      alimentação sustentável, sem gastar dinheiro com suplementos
+      desnecessários ou alimentos da moda. Melhorando sua saúde, sono e controle
+      emocional.
+    </p>
+    <p class="mat-h1">
+      <img
+        src="assets/arroz-feijão.jpg"
+        id="arroz-feijao"
+        alt="Emagrecer"
+        class="mat-elevation-z6"
+      />Sem precisar cortar aquele cuscuz com ovo no café da manhã, ou aquele
+      <strong>arroz com feijão e bife</strong> que você tanto gosta.
+    </p>
+    <p class="mat-h1">
+      Sem precisar fazer dietas restritivas que te deixam desanimado e sem força
+      de vontade, mesmo antes de começar.
+    </p>
+    <p class="mat-h1">
+      <img
+        src="assets/idosos.jpg"
+        id="idosos"
+        alt="Emagrecer"
+        class="mat-elevation-z6"
+      />
+      Imagina como seria
+      <strong>fazer atividades do seu cotidiano sem dificuldades</strong>.
+      Chegar na terceira idade completamente saudável, disposto e com energia.
+      Sem precisar gastar uma fortuna com médicos e remédios caros.
+    </p>
+    <div style="text-align: center;">
+      <p class="mat-h1" style="clear: both;">
+        Isso é possível, e posso te garantir que você pode conquistar os
+        resultados que deseja fazendo uma alimentação básica e natural.
+      </p>
+      <h1 class="mat-display-2" style="font-weight: normal;">
+        Você quer essa Transformação?
+      </h1>
+      <a
+        href="https://link.pagar.me/lr14R50HlP"
+        mat-raised-button
+        style="font-size: 20px;"
+      >
+        <mat-icon style="font-size: 28px; height: 32px; width: 32px;"
+          >food_bank</mat-icon
+        >
+        SIM! EU QUERO
+      </a>
     </div>
+  </div>
 </section>
 <section id="acompanhamento" class="mat-elevation-z6">
-    <div class="container">
-        <h1 class="mat-display-1">Emagreça com o acompanhamento de um profissional</h1>
-        <ul>
-            <li class="mat-headline">Emagreça com saúde e fique <strong>livre do efeito sanfona</strong>.</li>
-            <li class="mat-headline">Faça <strong>o básico que funciona</strong> e alcance grandes resultados.</li>
-            <li class="mat-headline">Tenha o acompanhamento de um profissional que vai <strong>te guiar pelo caminho
-                    certo</strong>.</li>
-            <li class="mat-headline"><strong>Atinja os seus objetivos mais rapidamente</strong> com um plano de ação
-                específico.</li>
-            <li class="mat-headline">Descubra o que realmente <strong>vai funcionar para você</strong> de forma
-                eficiente.</li>
-            <li class="mat-headline"><strong>Transforme o seu bem estar</strong> físico e mental para melhor.</li>
-            <li class="mat-headline">Impulsione a sua autoestima e <strong>viva melhor consigo</strong>.</li>
-        </ul>
-        <div style="text-align: center;">
-            <h1 class="mat-display-2">Você pode ter tudo isso agora</h1>
-            <a href="https://link.pagar.me/lHJEBsdDC8" mat-raised-button color="accent" style="font-size: 24px;">
-                <mat-icon style="font-size: 32px; height: 36px; width: 36px;">food_bank</mat-icon> Quero Agora
-            </a>
-        </div>
+  <div class="container">
+    <h1 class="mat-display-1">
+      Emagreça com o acompanhamento de um profissional
+    </h1>
+    <ul>
+      <li class="mat-headline">
+        Emagreça com saúde e fique <strong>livre do efeito sanfona</strong>.
+      </li>
+      <li class="mat-headline">
+        Faça <strong>o básico que funciona</strong> e alcance grandes
+        resultados.
+      </li>
+      <li class="mat-headline">
+        Tenha o acompanhamento de um profissional que vai
+        <strong>te guiar pelo caminho certo</strong>.
+      </li>
+      <li class="mat-headline">
+        <strong>Atinja os seus objetivos mais rapidamente</strong> com um plano
+        de ação específico.
+      </li>
+      <li class="mat-headline">
+        Descubra o que realmente <strong>vai funcionar para você</strong> de
+        forma eficiente.
+      </li>
+      <li class="mat-headline">
+        <strong>Transforme o seu bem estar</strong> físico e mental para melhor.
+      </li>
+      <li class="mat-headline">
+        Impulsione a sua autoestima e <strong>viva melhor consigo</strong>.
+      </li>
+    </ul>
+    <div style="text-align: center;">
+      <h1 class="mat-display-2">Você pode ter tudo isso agora</h1>
+      <a
+        href="https://link.pagar.me/lr14R50HlP"
+        mat-raised-button
+        color="accent"
+        style="font-size: 24px;"
+      >
+        <mat-icon style="font-size: 32px; height: 36px; width: 36px;"
+          >food_bank</mat-icon
+        >
+        Quero Agora
+      </a>
     </div>
+  </div>
 </section>
 <section id="consultoria" class="mat-elevation-z6">
-    <div class="container">
-        <h1 class="mat-display-1">Como funciona a consulta?</h1>
-        <ol>
-            <li class="mat-h1"><strong>Tudo acontecerá de forma online</strong>. Isso significa que você vai poder estar
-                no conforto da sua casa e fazer a consulta comigo. Você vai se cadastrar, efetuar o pagamento, e eu
-                entrarei em contato com você <strong>para marcarmos o primeiro encontro</strong>.</li>
-            <li class="mat-h1">No ato da consulta você me enviará fotos suas demonstrando medidas e seu peso para
-                analisarmos
-                o melhor a ser feito. Depois de 1 mês você enviará novamente para uma reavaliação com
-                <strong>objetivo de checar a evolução sobre o planejamento e seus resultados</strong>.
-            </li>
-            <li class="mat-h1">Após a consulta inicial eu vou <strong>te acompanhar durante 3 meses</strong>
-                detectando seus
-                acertos e
-                erros. Durante esse período nós vamos trabalhar duro para você atingir o seu resultado. Você terá
-                <strong>um
-                    planejamento traçado</strong> para seguir e poderá entrar em contato comigo a qualquer momento.</li>
-            <li class="mat-h1">Nós teremos contato direto no WhatsApp e você vai poder tirar qualquer dúvida comigo.
-                Eu te
-                acompanharei por lá e <strong>vou indicar tudo o que precisa ser feito</strong> passo a passo.
-                <strong>Você
-                    não estará sozinho(a)</strong> em nenhum momento.</li>
-        </ol>
-        <div style="text-align: center;">
-            <h1 class="mat-display-2">O que acha disso?</h1>
-            <a href="https://link.pagar.me/lHJEBsdDC8" mat-raised-button style="font-size: 20px;">
-                <mat-icon style="font-size: 28px; height: 32px; width: 32px;">food_bank</mat-icon> QUERO MINHA
-                CONSULTORIA
-            </a>
-        </div>
+  <div class="container">
+    <h1 class="mat-display-1">Como funciona a consulta?</h1>
+    <ol>
+      <li class="mat-h1">
+        <strong>Tudo acontecerá de forma online</strong>. Isso significa que
+        você vai poder estar no conforto da sua casa e fazer a consulta comigo.
+        Você vai se cadastrar, efetuar o pagamento, e eu entrarei em contato com
+        você <strong>para marcarmos o primeiro encontro</strong>.
+      </li>
+      <li class="mat-h1">
+        No ato da consulta você me enviará fotos suas demonstrando medidas e seu
+        peso para analisarmos o melhor a ser feito. Depois de 1 mês você enviará
+        novamente para uma reavaliação com
+        <strong
+          >objetivo de checar a evolução sobre o planejamento e seus
+          resultados</strong
+        >.
+      </li>
+      <li class="mat-h1">
+        Após a consulta inicial eu vou
+        <strong>te acompanhar durante 3 meses</strong>
+        detectando seus acertos e erros. Durante esse período nós vamos
+        trabalhar duro para você atingir o seu resultado. Você terá
+        <strong>um planejamento traçado</strong> para seguir e poderá entrar em
+        contato comigo a qualquer momento.
+      </li>
+      <li class="mat-h1">
+        Nós teremos contato direto no WhatsApp e você vai poder tirar qualquer
+        dúvida comigo. Eu te acompanharei por lá e
+        <strong>vou indicar tudo o que precisa ser feito</strong> passo a passo.
+        <strong>Você não estará sozinho(a)</strong> em nenhum momento.
+      </li>
+    </ol>
+    <div style="text-align: center;">
+      <h1 class="mat-display-2">O que acha disso?</h1>
+      <a
+        href="https://link.pagar.me/lr14R50HlP"
+        mat-raised-button
+        style="font-size: 20px;"
+      >
+        <mat-icon style="font-size: 28px; height: 32px; width: 32px;"
+          >food_bank</mat-icon
+        >
+        QUERO MINHA CONSULTORIA
+      </a>
     </div>
+  </div>
 </section>
 <section id="provasocial" class="bg-white">
-    <div class="container">
-        <h1 class="mat-display-1">QUEM JÁ ESTEVE COMIGO SE TRANSFORMOU E TEVE RESULTADOS</h1>
-        <!-- <p><img src="assets/relatos/resultado1.jpeg" alt="Resultado"></p> -->
-        <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assets/relatos/resultado1.jpeg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/relatos/resultado2.jpeg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/relatos/resultado3.jpeg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/relatos/resultado4.jpeg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/relatos/resultado5.jpeg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterior</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Próximo</span>
-            </a>
+  <div class="container">
+    <h1 class="mat-display-1">
+      QUEM JÁ ESTEVE COMIGO SE TRANSFORMOU E TEVE RESULTADOS
+    </h1>
+    <!-- <p><img src="assets/relatos/resultado1.jpeg" alt="Resultado"></p> -->
+    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselIndicators"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#carouselIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="assets/relatos/resultado1.jpeg"
+            class="d-block w-100"
+            alt="resultado"
+          />
         </div>
-        <div style="text-align: center;">
-            <a href="https://link.pagar.me/lHJEBsdDC8" mat-raised-button color="accent">
-                <mat-icon>food_bank</mat-icon> QUERO ESSES RESULTADOS
-            </a>
+        <div class="carousel-item">
+          <img
+            src="assets/relatos/resultado2.jpeg"
+            class="d-block w-100"
+            alt="resultado"
+          />
         </div>
+        <div class="carousel-item">
+          <img
+            src="assets/relatos/resultado3.jpeg"
+            class="d-block w-100"
+            alt="resultado"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="assets/relatos/resultado4.jpeg"
+            class="d-block w-100"
+            alt="resultado"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="assets/relatos/resultado5.jpeg"
+            class="d-block w-100"
+            alt="resultado"
+          />
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselIndicators"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselIndicators"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
     </div>
+    <div style="text-align: center;">
+      <a
+        href="https://link.pagar.me/lr14R50HlP"
+        mat-raised-button
+        color="accent"
+      >
+        <mat-icon>food_bank</mat-icon> QUERO ESSES RESULTADOS
+      </a>
+    </div>
+  </div>
 </section>
 <section id="valor" style="text-align: center;">
-    <h1 class="mat-display-1">VALOR ESPECIAL DISPONÍVEL</h1>
-    <div class="container">
-        <p class="mat-h1">Aproveite a Consulta Nutrição 4x para ter o meu acompanhamento pessoal durante 3 meses
-            completos e finalmente emagrecer da forma certa.</p>
-        <img src="assets/box-nutrição-4x.png" alt="Box Consulta Nutrição 4x">
-    </div>
-    <h2 class="mat-display-2" style="margin-bottom: 0;">Nutrição 4x</h2>
-    <div style="background-color: #383b3f;color: white;padding: 15px;">
-        <p style="color: #df7b2a">De: <s>R$ 540,00</s></p>
-        <h2>POR APENAS</h2>
-        <h3><strong>3x R$ 134,00</strong> <br><span>ou R$ 400,00 à vista</span></h3>
-        <h2>O que você recebe?</h2>
-        <ul>
-            <li>Acompanhamento Exclusivo por 3 Meses.</li>
-            <li>1 Consulta Online de Alinhamento.</li>
-            <li>Questionário Especial para Traçar seu Perfil.</li>
-            <li>Definição de um Plano de Ação.</li>
-            <li>Planejamento de Metas Específicas.</li>
-            <li>Contato Direto por WhatsApp e Email.</li>
-        </ul>
-        <h2 class="mat-display-1" style="margin: 20px 0">Participe Agora</h2>
-        <a href="https://link.pagar.me/lHJEBsdDC8" mat-raised-button style="margin-bottom: 20px">
-            <mat-icon>food_bank</mat-icon> Quero Participar
-        </a>
-    </div>
+  <h1 class="mat-display-1">VALOR ESPECIAL DISPONÍVEL</h1>
+  <div class="container">
+    <p class="mat-h1">
+      Aproveite a Consulta Nutrição 4x para ter o meu acompanhamento pessoal
+      durante 3 meses completos e finalmente emagrecer da forma certa.
+    </p>
+    <img src="assets/box-nutrição-4x.png" alt="Box Consulta Nutrição 4x" />
+  </div>
+  <h2 class="mat-display-2" style="margin-bottom: 0;">Nutrição 4x</h2>
+  <div style="background-color: #383b3f; color: white; padding: 15px;">
+    <p style="color: #df7b2a;">De: <s>R$ 570,00</s></p>
+    <h2>POR APENAS</h2>
+    <h3>
+      <strong>3x R$ 134,00</strong> <br /><span>ou R$ 470,00 à vista</span>
+    </h3>
+    <h2>O que você recebe?</h2>
+    <ul>
+      <li>Acompanhamento Exclusivo por 3 Meses.</li>
+      <li>1 Consulta Online de Alinhamento.</li>
+      <li>Questionário Especial para Traçar seu Perfil.</li>
+      <li>Definição de um Plano de Ação.</li>
+      <li>Planejamento de Metas Específicas.</li>
+      <li>Contato Direto por WhatsApp e Email.</li>
+    </ul>
+    <h2 class="mat-display-1" style="margin: 20px 0;">Participe Agora</h2>
+    <a
+      href="https://link.pagar.me/lr14R50HlP"
+      mat-raised-button
+      style="margin-bottom: 20px;"
+    >
+      <mat-icon>food_bank</mat-icon> Quero Participar
+    </a>
+  </div>
 </section>
 <app-faq></app-faq>
