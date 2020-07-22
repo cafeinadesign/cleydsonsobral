@@ -144,6 +144,12 @@ section#valor {
     ul {
         max-width: 500px;
         margin: 0 auto;
+        li {
+            list-style: none;
+        }
+        li::before {
+            content: "✅ ";
+        }
     }
     img {
         width: 100%;
