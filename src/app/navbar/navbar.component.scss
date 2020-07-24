@@ -26,6 +26,12 @@ nav > mat-toolbar {
       margin-right: 0;
     }
   }
+  nav.show-small {
+    display: flex;
+    a.mat-button {
+      flex: 1;
+    }
+  }
   .show-small {
     display: block;
   }
