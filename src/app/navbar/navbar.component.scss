@@ -23,13 +23,22 @@ nav > mat-toolbar {
 @media (max-width: 720px) {
   nav > mat-toolbar {
     a#logo {
-      margin-right: 0;
+      margin-right: 10px;
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
   nav.show-small {
     display: flex;
     a.mat-button {
       flex: 1;
+    }
+    a.mat-button:first-child,
+    a.mat-button:last-child {
+      padding-right: 0;
+      padding-left: 0;
     }
   }
   .show-small {
