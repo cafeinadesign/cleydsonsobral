@@ -1,175 +1,187 @@
 p,
 a,
 button {
-    font-family: "Barlow", sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 header {
-    background-image: url("../../assets/arroz-feijao.jpg");
-    background-position: center center;
-    background-size: cover;
+  background-image: url("../../assets/arroz-feijao.jpg");
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 40px;
+  div.header {
+    padding: 60px 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      102deg,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0) 82%
+    );
+    background-position: bottom center;
+  }
+  h1.mat-display-3 {
+    font-family: "Archivo", sans-serif;
+  }
+  h3.mat-subheading-2,
+  h2.mat-headline {
+    font-family: "Barlow", sans-serif;
+  }
+  h1.mat-display-3,
+  h2.mat-headline,
+  h3.mat-subheading-2 {
+    color: #fff;
+    text-shadow: 2px 2px 8px #000;
+  }
+  h1.mat-display-3 {
+    // font-weight: 300;
+    margin-bottom: 15px;
+  }
+  h2.mat-headline {
+    font-weight: 300;
     margin-bottom: 40px;
-    div.header {
-        padding: 60px 0;
-        background: rgb(0, 0, 0);
-        background: linear-gradient(102deg, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 82%);
-        background-position: bottom center;
-    }
-    h1.mat-display-3 {
-        font-family: "Archivo", sans-serif;
-    }
-    h3.mat-subheading-2,
-    h2.mat-headline {
-        font-family: "Barlow", sans-serif;
-    }
-    h1.mat-display-3,
-    h2.mat-headline,
-    h3.mat-subheading-2 {
-        color: #fff;
-        text-shadow: 2px 2px 8px #000;
-    }
-    h1.mat-display-3 {
-        // font-weight: 300;
-        margin-bottom: 15px;
-    }
-    h2.mat-headline {
-        font-weight: 300;
-        margin-bottom: 40px;
-    }
-    .mat-button {
-        color: white;
-        margin-left: 15px;
-    }
+  }
+  .mat-button {
+    color: white;
+    margin-left: 15px;
+  }
 }
 .mat-raised-button {
-    border-radius: 20px;
+  border-radius: 20px;
 }
 main {
-    h1.mat-display-1 {
-        color: #df7b2a;
-        margin: 20px 0 26px;
-    }
-    h2 {
-        color: #383b3f;
-        font-weight: normal;
-    }
-    #fotoperfil {
-        padding-top: 120px;
-    }
-    padding-bottom: 30px;
+  h1.mat-display-1 {
+    color: #df7b2a;
+    margin: 20px 0 26px;
+  }
+  h2 {
+    color: #383b3f;
+    font-weight: normal;
+  }
+  #fotoperfil {
+    padding-top: 120px;
+  }
+  padding-bottom: 30px;
 }
 section {
-    padding: 30px 0;
+  padding: 30px 0;
 }
 section#missao,
 section#valor {
-    background-color: #383b3f;
-    color: #fff;
-    ul {
-        padding-inline-start: 0;
-    }
-    h1.mat-display-1 {
-        font-family: "Archivo", sans-serif;
-        margin: 0 0 30px;
-        text-align: center;
-    }
-    h2.mat-headline {
-        font-family: "Archivo", sans-serif;
-        margin: 20px 0 26px;
-        text-align: center;
-    }
-    p.mat-title {
-        font-family: "Barlow", sans-serif;
-    }
-    a {
-        margin-bottom: 20px;
-    }
+  background-color: #383b3f;
+  color: #fff;
+  ul {
+    padding-inline-start: 0;
+  }
+  h1.mat-display-1 {
+    font-family: "Archivo", sans-serif;
+    margin: 0 0 30px;
+    text-align: center;
+  }
+  h2.mat-headline {
+    font-family: "Archivo", sans-serif;
+    margin: 20px 0 26px;
+    text-align: center;
+  }
+  p.mat-title {
+    font-family: "Barlow", sans-serif;
+  }
+  a {
+    margin-bottom: 20px;
+  }
 }
 
 section#nutricao4x {
-    h1.mat-display-1 {
-        font-family: "Archivo", sans-serif;
-        margin: 0 0 30px;
-        text-align: center;
-    }
+  h1.mat-display-1 {
+    font-family: "Archivo", sans-serif;
+    margin: 0 0 30px;
+    text-align: center;
+  }
 }
 
 main#agendar {
-    background-image: url("../../assets/saude.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    padding: 0;
-    h1.mat-display-1 {
-        font-family: "Archivo", sans-serif;
-        color: white;
-        margin: 0 0 30px;
-        text-align: left;
-        font-weight: bold;
-    }
-    a.mat-button {
-        color: white;
-    }
+  background-image: url("../../assets/saude.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 0;
+  h1.mat-display-1 {
+    font-family: "Archivo", sans-serif;
+    color: white;
+    margin: 0 0 30px;
+    text-align: left;
+    font-weight: bold;
+  }
+  a.mat-button {
+    color: white;
+  }
 }
 
 #provasocial {
-    h1.mat-display-1 {
-        margin: 30px 0;
-        text-align: center;
-    }
-    img {
-        max-width: 100%;
-    }
-    #carouselIndicators {
-        max-width: 500px;
-        margin: 0 auto 30px;
-    }
-    padding-bottom: 30px;
+  h1.mat-display-1 {
+    margin: 30px 0;
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+  }
+  #carouselIndicators {
+    max-width: 500px;
+    margin: 0 auto 30px;
+  }
+  padding-bottom: 30px;
 }
 
 #redesociais {
-    text-align: center;
-    h1.mat-display-1 {
-        margin-bottom: 30px;
-    }
-    a.mat-button {
-        font-size: 34px;
-        margin: 10px 0;
-    }
+  text-align: center;
+  h1.mat-display-1 {
+    margin-bottom: 30px;
+  }
+  a.mat-button {
+    font-size: 34px;
+    margin: 10px 0;
+  }
 }
 
 main#agendar > div {
-    background: linear-gradient(102deg, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 82%);
-    padding: 60px 0;
+  background: linear-gradient(
+    102deg,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0) 82%
+  );
+  padding: 60px 0;
 }
 
 .mat-expansion-panel-header-title {
-    color: #383b3f;
-    font-weight: bold;
+  color: #383b3f;
+  font-weight: bold;
 }
 
 /**
     * Rules for when the device is detected to be a small screen.
     */
 @media (max-width: 720px) {
-    header {
-        background-image: url("../../assets/arroz-feijao-mobile.jpg");
-        background-position-x: right;
-        background-position-y: bottom;
-        div.header {
-            background: rgb(0, 0, 0);
-            background: linear-gradient(120deg, rgba(0, 0, 0, 0.5) 62%, rgba(0, 0, 0, 0) 100%);
-        }
+  header {
+    background-image: url("../../assets/arroz-feijao-mobile.jpg");
+    background-position-x: right;
+    background-position-y: bottom;
+    div.header {
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        120deg,
+        rgba(0, 0, 0, 0.5) 62%,
+        rgba(0, 0, 0, 0) 100%
+      );
     }
-    main {
-        h1.mat-display-1 {
-            color: #df7b2a;
-            margin: 0 0 10px;
-        }
-        #fotoperfil {
-            padding-top: 0;
-        }
+  }
+  main {
+    h1.mat-display-1 {
+      color: #df7b2a;
+      margin: 0 0 10px;
     }
-    main#agendar {
-        background-image: url("../../assets/saude.jpg");
-        background-attachment: local;
+    #fotoperfil {
+      padding-top: 0;
     }
+  }
+  main#agendar {
+    background-image: url("../../assets/saude.jpg");
+    background-attachment: local;
+  }
 }
