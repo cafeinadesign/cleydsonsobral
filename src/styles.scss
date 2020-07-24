@@ -94,7 +94,11 @@ $cleydsonsobral-accent: mat-palette($md-cinza);
 $cleydsonsobral-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$cleydsonsobral-theme: mat-light-theme($cleydsonsobral-primary, $cleydsonsobral-accent, $cleydsonsobral-warn);
+$cleydsonsobral-theme: mat-light-theme(
+  $cleydsonsobral-primary,
+  $cleydsonsobral-accent,
+  $cleydsonsobral-warn
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -138,9 +142,9 @@ h2.mat-title,
   */
 @media (max-width: 720px) {
   .show-small {
-      display: block;
+    display: block;
   }
   .hide-small {
-      display: none;
+    display: none;
   }
 }

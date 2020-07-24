@@ -1,8 +1,13 @@
-mat-toolbar {
-    position: relative;
+nav > mat-toolbar {
+  a#logo {
+    margin-right: 30px;
+  }
+  a.mat-button {
+    font-family: "Barlow", sans-serif;
+  }
 }
 .spacer {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .show-small {
@@ -16,10 +21,15 @@ mat-toolbar {
   * Rules for when the device is detected to be a small screen.
   */
 @media (max-width: 720px) {
+  nav > mat-toolbar {
+    a#logo {
+      margin-right: 0;
+    }
+  }
   .show-small {
-      display: block;
+    display: block;
   }
   .hide-small {
-      display: none;
+    display: none;
   }
 }
