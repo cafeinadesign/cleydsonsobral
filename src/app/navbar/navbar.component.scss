@@ -20,7 +20,7 @@ nav > mat-toolbar {
 /**
   * Rules for when the device is detected to be a small screen.
   */
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   nav > mat-toolbar {
     a#logo {
       margin-right: 10px;

@@ -157,7 +157,7 @@ main#agendar > div {
 /**
     * Rules for when the device is detected to be a small screen.
     */
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   header {
     background-image: url("../../assets/arroz-feijao-mobile.jpg");
     background-position-x: right;

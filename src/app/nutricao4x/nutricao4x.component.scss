@@ -1,208 +1,208 @@
 header {
-    background-color: #383b3f;
-    color: white;
-    #avatar {
-        margin: 20px 0 20px;
-        text-align: center;
-        // img {
-        //     border-radius: 120px;
-        //     border: 3px solid white;
-        // }
-    }
-    img {
-        border: 2px;
-        border-color: #fff;
-    }
+  background-color: #383b3f;
+  color: white;
+  #avatar {
+    margin: 20px 0 20px;
+    text-align: center;
+    // img {
+    //     border-radius: 120px;
+    //     border: 3px solid white;
+    // }
+  }
+  img {
+    border: 2px;
+    border-color: #fff;
+  }
 }
 .header > div > div > div.jumbotron {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    h1.mat-display-3 {
-        color: #df7b2a;
-        margin: 20px 0 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  h1.mat-display-3 {
+    color: #df7b2a;
+    margin: 20px 0 20px;
+  }
+  h2.mat-headline {
+    margin-top: 20px;
+    span {
+      background-color: #df7b2a;
+      padding-left: 5px;
+      padding-right: 5px;
+      color: white;
     }
-    h2.mat-headline {
-        margin-top: 20px;
-        span {
-            background-color: #df7b2a;
-            padding-left: 5px;
-            padding-right: 5px;
-            color: white;
-        }
-    }
+  }
 }
 h1.mat-display-1 {
-    font-weight: bold;
+  font-weight: bold;
 }
 .mat-raised-button {
-    border-radius: 40px;
-    padding: 6px 20px;
-    text-transform: uppercase;
+  border-radius: 40px;
+  padding: 6px 20px;
+  text-transform: uppercase;
 }
 main {
-    padding: 30px 0;
-    // background-color: #383b3f;
-    // color: white;
-    h1.mat-display-1 {
-        text-align: center;
-    }
-    p.mat-body {
-        font-size: 20px;
-        font-family: "Barlow";
-    }
+  padding: 30px 0;
+  // background-color: #383b3f;
+  // color: white;
+  h1.mat-display-1 {
+    text-align: center;
+  }
+  p.mat-body {
+    font-size: 20px;
+    font-family: "Barlow";
+  }
 }
 section#acompanhamento,
 section.bg-white {
-    padding: 30px 0;
-    h1.mat-display-1,
-    h1.mat-display-2 {
-        text-align: center;
-        color: #df7b2a;
-        margin: 20px 0 30px;
-        font-family: "Archivo", sans-serif;
+  padding: 30px 0;
+  h1.mat-display-1,
+  h1.mat-display-2 {
+    text-align: center;
+    color: #df7b2a;
+    margin: 20px 0 30px;
+    font-family: "Archivo", sans-serif;
+  }
+  ul {
+    margin-left: 30px;
+    li {
+      font-family: "Barlow", sans-serif;
+      font-size: 24px;
+      strong {
+        font-weight: 900;
+      }
     }
-    ul {
-        margin-left: 30px;
-        li {
-            font-family: "Barlow", sans-serif;
-            font-size: 24px;
-            strong {
-                font-weight: 900;
-            }
-        }
-    }
-    div > h3 > strong {
-        color: white;
-        background-color: #df7b2a;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
+  }
+  div > h3 > strong {
+    color: white;
+    background-color: #df7b2a;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 section#valores,
 section#consultoria {
-    background-color: #383b3f;
-    color: white;
-    padding: 30px 0;
-    h1.mat-display-1 {
-        font-weight: bold;
-    }
-    h1.mat-display-1,
-    h1.mat-display-2 {
-        color: #df7b2a;
-        margin: 20px 0 30px;
-        text-align: center;
-    }
-    strong {
-        font-weight: normal;
-        background-color: #df7b2a;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-    #emagrecimento {
-        height: 260px;
-        max-width: 100%;
-        margin-right: 15px;
-        float: left;
-    }
-    #arroz-feijao {
-        width: 260px;
-        max-width: 100%;
-        margin-right: 15px;
-        float: right;
-    }
-    #idosos {
-        height: 240px;
-        max-width: 100%;
-        margin-right: 15px;
-        float: left;
-    }
+  background-color: #383b3f;
+  color: white;
+  padding: 30px 0;
+  h1.mat-display-1 {
+    font-weight: bold;
+  }
+  h1.mat-display-1,
+  h1.mat-display-2 {
+    color: #df7b2a;
+    margin: 20px 0 30px;
+    text-align: center;
+  }
+  strong {
+    font-weight: normal;
+    background-color: #df7b2a;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  #emagrecimento {
+    height: 260px;
+    max-width: 100%;
+    margin-right: 15px;
+    float: left;
+  }
+  #arroz-feijao {
+    width: 260px;
+    max-width: 100%;
+    margin-right: 15px;
+    float: right;
+  }
+  #idosos {
+    height: 240px;
+    max-width: 100%;
+    margin-right: 15px;
+    float: left;
+  }
 }
 #provasocial {
-    h1.mat-display-1 {
-        margin: 30px 0;
-        text-align: center;
-    }
-    img {
-        max-width: 100%;
-    }
-    #carouselIndicators {
-        max-width: 500px;
-        margin: 0 auto 30px;
-    }
-    padding-bottom: 30px;
+  h1.mat-display-1 {
+    margin: 30px 0;
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+  }
+  #carouselIndicators {
+    max-width: 500px;
+    margin: 0 auto 30px;
+  }
+  padding-bottom: 30px;
 }
 section#valor {
-    h1.mat-display-1 {
-        margin: 30px 0;
-        background-color: #df7b2a;
-        color: white;
+  h1.mat-display-1 {
+    margin: 30px 0;
+    background-color: #df7b2a;
+    color: white;
+  }
+  h2.mat-display-2 {
+    background-color: #df7b2a;
+    color: white;
+  }
+  ul {
+    padding-left: 0;
+    max-width: 500px;
+    margin: 0 auto;
+    li {
+      list-style: none;
     }
-    h2.mat-display-2 {
-        background-color: #df7b2a;
-        color: white;
+    li::before {
+      content: "✅ ";
     }
-    ul {
-        padding-left: 0;
-        max-width: 500px;
-        margin: 0 auto;
-        li {
-            list-style: none;
-        }
-        li::before {
-            content: "✅ ";
-        }
-    }
-    img {
-        width: 100%;
-    }
+  }
+  img {
+    width: 100%;
+  }
 }
 
 /**
     * Rules for when the device is detected to be a small screen.
     */
-@media (max-width: 720px) {
-    header {
-        text-align: center;
-        // background-color: black;
+@media (max-width: 768px) {
+  header {
+    text-align: center;
+    // background-color: black;
+  }
+  header > div > div > div > div.jumbotron > a:nth-child(1) {
+    display: block;
+    text-align: center;
+  }
+  .header > div > div > div.jumbotron {
+    h1.mat-display-3 {
+      font-size: 30px;
+      line-height: 36px;
     }
-    header > div > div > div > div.jumbotron > a:nth-child(1) {
-        display: block;
-        text-align: center;
+    h2.mat-headline {
+      font-size: 20px;
     }
-    .header > div > div > div.jumbotron {
-        h1.mat-display-3 {
-            font-size: 30px;
-            line-height: 36px;
-        }
-        h2.mat-headline {
-            font-size: 20px;
-        }
+  }
+  p {
+    font-family: "Barlow", sans-serif;
+    font-size: 20px;
+    line-height: normal;
+  }
+  article p {
+    font-size: 15px;
+  }
+  section#valores {
+    img#emagrecimento,
+    img#arroz-feijao,
+    img#idosos {
+      max-width: 33%;
+      height: auto;
     }
-    p {
-        font-family: "Barlow", sans-serif;
-        font-size: 20px;
-        line-height: normal;
+  }
+  section#acompanhamento,
+  section.bg-white {
+    ul {
+      margin-left: 0;
     }
-    article p {
-        font-size: 15px;
+  }
+  section#valor {
+    img {
+      max-width: 100%;
     }
-    section#valores {
-        img#emagrecimento,
-        img#arroz-feijao,
-        img#idosos {
-            max-width: 33%;
-            height: auto;
-        }
-    }
-    section#acompanhamento,
-    section.bg-white {
-        ul {
-            margin-left: 0;
-        }
-    }
-    section#valor {
-        img {
-            max-width: 100%;
-        }
-    }
+  }
 }
