@@ -5,6 +5,11 @@ nav > mat-toolbar {
   a.mat-button {
     font-family: "Barlow", sans-serif;
   }
+  img.avatar {
+    height: 36px;
+    border-radius: 18px;
+    border: 1px solid #383b3f;
+  }
 }
 .spacer {
   flex-grow: 1;

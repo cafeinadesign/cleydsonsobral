@@ -1,0 +1,34 @@
+<div id="login">
+  <mat-card>
+    <div>
+      <img src="assets/logo.svg" alt="Cleydson Sobral" />
+    </div>
+    <h1 class="mat-headline">Fazer login</h1>
+    <h2 class="mat-title">Use sua Conta Google</h2>
+    <div style="padding-top: 16px;">
+      <div>
+        <button mat-raised-button (click)="login()">
+          <img
+            src="assets/logo/Google__G__Logo.svg"
+            alt="Google G Logo"
+            height="16"
+            style="margin: -4px 4px 0 0;"
+          />
+          Entrar com o Google
+        </button>
+      </div>
+      <a
+        mat-button
+        href="https://link.pagar.me/lr14R50HlP"
+        style="margin-top: 8px;"
+      >
+        Pular cadastro
+      </a>
+    </div>
+    <div style="padding-top: 32px;">
+      <button mat-button color="primary" routerLink="/cadastro">
+        Criar conta
+      </button>
+    </div>
+  </mat-card>
+</div>

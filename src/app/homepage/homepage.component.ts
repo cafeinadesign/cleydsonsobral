@@ -1,24 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { auth } from 'firebase/app';
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.scss']
+  styleUrls: ['./homepage.component.scss'],
 })
 export class HomepageComponent implements OnInit {
+  constructor() {}
 
-  constructor(public auth: AngularFireAuth) { }
-
-  ngOnInit(): void {
-  }
-  login() {
-    this.auth.languageCode = new Promise(() => 'pt');
-    this.auth.signInWithPopup(new auth.GoogleAuthProvider());
-  }
+  ngOnInit(): void {}
+  // getUsuario() {
+  //   this.usuarioService.getUsuarioAtual();
+  // }
   logout() {
-    this.auth.signOut();
+    // this.auth.signOut();
   }
-
 }

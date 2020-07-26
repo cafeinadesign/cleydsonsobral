@@ -1,0 +1,23 @@
+div#cadastro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #eee;
+  mat-card {
+    // background-color: #fafafa;
+    // background-image: url("../../assets/perfil.png");
+    // background-repeat: no-repeat;
+    // background-position: right bottom;
+    // background-size: 192px auto;
+    // background-position: 242px bottom;
+    // background-image: url("../../assets/box-nutrição-4x.png");
+    // background-size: auto 192px;
+    h1 {
+      color: #383b3f;
+      padding-top: 30px;
+    }
+    padding: 48px 40px 36px;
+    width: 450px;
+  }
+}

@@ -115,7 +115,8 @@ body {
   margin: 0;
 }
 h1.mat-display-3,
-h1.mat-display-1 {
+h1.mat-display-1,
+h1.mat-headline {
   font-family: "Archivo", sans-serif;
 }
 h2,
@@ -124,9 +125,11 @@ p,
 li,
 li.mat-headline,
 p.mat-h1,
+p.mat-body-2,
 h2.mat-title,
 .mat-expansion-panel-header,
-.mat-raised-button {
+.mat-raised-button,
+.mat-button {
   font-family: "Barlow", sans-serif;
 }
 

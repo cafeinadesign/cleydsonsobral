@@ -1,0 +1,47 @@
+div#login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  mat-card {
+    // background-color: #fafafa;
+    // background-position: 242px bottom;
+    // background-image: url("../../assets/box-nutrição-4x.png");
+    // background-size: auto 192px;
+    // background-repeat: no-repeat;
+    div > img {
+      height: 24px;
+    }
+    h1 {
+      color: #383b3f;
+      padding-top: 30px;
+    }
+    padding: 48px 40px 36px;
+    width: 450px;
+  }
+}
+
+/**
+  * Rules for when the device is detected to be a small screen.
+  */
+@media (max-width: 768px) {
+  div#login {
+    display: block;
+    min-height: auto;
+    text-align: center;
+    mat-card {
+      display: block;
+      padding: 48px 40px 36px;
+      width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+      div > img {
+        width: 62%;
+      }
+      h1 {
+        color: #383b3f;
+        padding-top: 30px;
+      }
+    }
+  }
+}
