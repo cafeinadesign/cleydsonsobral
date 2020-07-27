@@ -7,15 +7,36 @@ import { Nutricao4xComponent } from './nutricao4x/nutricao4x.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LembrarSenhaComponent } from './lembrar-senha/lembrar-senha.component';
+import {
+  AngularFireAuthGuard,
+  redirectLoggedInTo,
+} from '@angular/fire/auth-guard';
+
+const redirectLoggedInToItems = () => redirectLoggedInTo(['']);
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'termos-uso', component: TermosDeUsoComponent },
   { path: 'politica-cancelamento', component: PoliticaDeCancelamentoComponent },
   { path: 'nutricao4x', component: Nutricao4xComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'cadastro', component: CadastroComponent },
-  { path: 'lemrar-senha', component: LembrarSenhaComponent },
+  {
+    path: 'login',
+    component: LoginComponent,
+    canActivate: [AngularFireAuthGuard],
+    data: { authGuardPipe: redirectLoggedInToItems },
+  },
+  {
+    path: 'cadastro',
+    component: CadastroComponent,
+    canActivate: [AngularFireAuthGuard],
+    data: { authGuardPipe: redirectLoggedInToItems },
+  },
+  {
+    path: 'lemrar-senha',
+    component: LembrarSenhaComponent,
+    canActivate: [AngularFireAuthGuard],
+    data: { authGuardPipe: redirectLoggedInToItems },
+  },
 ];
 
 @NgModule({
