@@ -1,0 +1,131 @@
+<div id="consulta">
+  <mat-card>
+    <mat-horizontal-stepper #stepper>
+      <mat-step [stepControl]="firstFormGroup" errorMessage="Name is required.">
+        <form [formGroup]="firstFormGroup">
+          <div *ngIf="auth.user | async as user">
+            <img
+              [src]="user.photoURL"
+              [alt]="user.displayName"
+              height="96"
+              id="avatar"
+            />
+            <h1 class="mat-headline">Olá, {{ user.displayName }}</h1>
+          </div>
+          <ng-template matStepLabel>Dados pessoais</ng-template>
+          <mat-form-field appearance="outline">
+            <mat-label>CPF</mat-label>
+            <input
+              type="tel"
+              matInput
+              placeholder="Digite seu CPF"
+              formControlName="cpfCtrl"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Telefone</mat-label>
+            <input
+              type="tel"
+              matInput
+              placeholder="Digite seu Telefone"
+              formControlName="telefoneCtrl"
+              required
+            />
+          </mat-form-field>
+          <div>
+            <h2 class="mat-title">Endereço</h2>
+            <mat-form-field appearance="outline">
+              <mat-label>CEP</mat-label>
+              <input
+                type="tel"
+                matInput
+                placeholder="Digite seu CEP"
+                formControlName="cepCtrl"
+                required
+              />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Nº</mat-label>
+              <input
+                type="tel"
+                matInput
+                placeholder="Número"
+                formControlName="nCtrl"
+                size="2"
+                required
+              />
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="outline">
+              <mat-label>Complemento</mat-label>
+              <input
+                matInput
+                placeholder="Digite seu Complemento"
+                formControlName="complementoCtrl"
+                required
+              />
+            </mat-form-field>
+          </div>
+          <div>
+            <button mat-raised-button color="accent" matStepperNext>
+              Continuar
+            </button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step
+        [stepControl]="secondFormGroup"
+        errorMessage="Address is required."
+      >
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Agendamento</ng-template>
+          <h1 class="mat-headline">Selecione horário de preferência</h1>
+          <p class="mat-body-2">
+            Horário sujeito a confirmação do meu secretário
+          </p>
+          <h2 class="mat-title">Horário de atendimento:</h2>
+          <p>
+            Terça e Sexta 6:00 7:30 9:00 10:30<br />
+            Quarta e quinta 13:00 14:30 16:00 17:30
+          </p>
+          <p>Dia da semana de preferência</p>
+          <mat-radio-group aria-label="Dia da semana de preferência">
+            <mat-radio-button value="1">Terça-feira</mat-radio-button>
+            <mat-radio-button value="2">Quarta-feira</mat-radio-button>
+            <mat-radio-button value="3">Quinta-feira</mat-radio-button>
+            <mat-radio-button value="4">Sexta-feira</mat-radio-button>
+          </mat-radio-group>
+          <div>
+            <p>Horário de preferência</p>
+            <mat-radio-group aria-label="Dia da semana de preferência">
+              Manhã:
+              <mat-radio-button value="6:00">6:00</mat-radio-button>
+              <mat-radio-button value="7:30">7:30</mat-radio-button>
+              <mat-radio-button value="9:00">9:00</mat-radio-button>
+              <mat-radio-button value="10:30">10:30</mat-radio-button><br />
+              Tarde:
+              <mat-radio-button value="13:00">13:00</mat-radio-button>
+              <mat-radio-button value="14:30">14:30</mat-radio-button>
+              <mat-radio-button value="16:00">16:00</mat-radio-button>
+              <mat-radio-button value="17:30">17:30</mat-radio-button>
+            </mat-radio-group>
+          </div>
+          <div>
+            <button mat-button matStepperPrevious>Voltar</button>
+            <button mat-button matStepperNext>Continuar</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Pagamento</ng-template>
+        <p>You are now done.</p>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </mat-card>
+</div>

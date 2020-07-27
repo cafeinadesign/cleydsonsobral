@@ -16,6 +16,11 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -26,6 +31,7 @@ import { FaqComponent } from './faq/faq.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LembrarSenhaComponent } from './lembrar-senha/lembrar-senha.component';
+import { ConsultaComponent } from './consulta/consulta.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +46,7 @@ import { LembrarSenhaComponent } from './lembrar-senha/lembrar-senha.component';
     LoginComponent,
     CadastroComponent,
     LembrarSenhaComponent,
+    ConsultaComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +62,11 @@ import { LembrarSenhaComponent } from './lembrar-senha/lembrar-senha.component';
     MatCardModule,
     MatGridListModule,
     MatMenuModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule,
+    ReactiveFormsModule,
   ],
   providers: [Title],
   bootstrap: [AppComponent],

@@ -127,9 +127,14 @@ li.mat-headline,
 p.mat-h1,
 p.mat-body-2,
 h2.mat-title,
+h3.mat-subheading-2,
 .mat-expansion-panel-header,
 .mat-raised-button,
-.mat-button {
+.mat-button,
+input.mat-input-element,
+.mat-radio-button,
+.mat-stepper-vertical,
+.mat-stepper-horizontal {
   font-family: "Barlow", sans-serif;
 }
 

@@ -7,11 +7,14 @@ import { Nutricao4xComponent } from './nutricao4x/nutricao4x.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LembrarSenhaComponent } from './lembrar-senha/lembrar-senha.component';
+import { ConsultaComponent } from './consulta/consulta.component';
 import {
   AngularFireAuthGuard,
   redirectLoggedInTo,
+  redirectUnauthorizedTo,
 } from '@angular/fire/auth-guard';
 
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 const redirectLoggedInToItems = () => redirectLoggedInTo(['']);
 
 const routes: Routes = [
@@ -36,6 +39,12 @@ const routes: Routes = [
     component: LembrarSenhaComponent,
     canActivate: [AngularFireAuthGuard],
     data: { authGuardPipe: redirectLoggedInToItems },
+  },
+  {
+    path: 'consulta',
+    component: ConsultaComponent,
+    canActivate: [AngularFireAuthGuard],
+    data: { authGuardPipe: redirectUnauthorizedToLogin },
   },
 ];
 
