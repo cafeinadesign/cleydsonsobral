@@ -1,15 +1,13 @@
 <div id="consulta">
   <mat-card>
+    <div>
+      <img id="logo" src="assets/logo.svg" alt="Cleydson Sobral" height="24" />
+    </div>
     <mat-horizontal-stepper #stepper>
       <mat-step [stepControl]="firstFormGroup" errorMessage="Name is required.">
         <form [formGroup]="firstFormGroup">
           <div *ngIf="auth.user | async as user">
-            <img
-              [src]="user.photoURL"
-              [alt]="user.displayName"
-              height="96"
-              id="avatar"
-            />
+            <img [src]="user.photoURL" [alt]="user.displayName" id="avatar" />
             <h1 class="mat-headline">Olá, {{ user.displayName }}</h1>
           </div>
           <ng-template matStepLabel>Dados pessoais</ng-template>
@@ -23,19 +21,22 @@
               required
             />
           </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Telefone</mat-label>
-            <input
-              type="tel"
-              matInput
-              placeholder="Digite seu Telefone"
-              formControlName="telefoneCtrl"
-              required
-            />
-          </mat-form-field>
+          <div>
+            <h2 class="mat-title">Contato</h2>
+            <mat-form-field appearance="outline">
+              <mat-label>Telefone</mat-label>
+              <input
+                type="tel"
+                matInput
+                placeholder="Digite seu Telefone"
+                formControlName="telefoneCtrl"
+                required
+              />
+            </mat-form-field>
+          </div>
           <div>
             <h2 class="mat-title">Endereço</h2>
-            <mat-form-field appearance="outline">
+            <mat-form-field appearance="outline" style="margin-right: 10px;">
               <mat-label>CEP</mat-label>
               <input
                 type="tel"
@@ -45,7 +46,7 @@
                 required
               />
             </mat-form-field>
-            <mat-form-field appearance="outline">
+            <mat-form-field appearance="outline" style="width: 72px;">
               <mat-label>Nº</mat-label>
               <input
                 type="tel"
@@ -114,16 +115,31 @@
           </div>
           <div>
             <button mat-button matStepperPrevious>Voltar</button>
-            <button mat-button matStepperNext>Continuar</button>
+            <button mat-raised-button color="accent" matStepperNext>
+              Continuar
+            </button>
           </div>
         </form>
       </mat-step>
       <mat-step>
         <ng-template matStepLabel>Pagamento</ng-template>
-        <p>You are now done.</p>
+        <p>Teste.</p>
         <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button (click)="stepper.reset()">Reset</button>
+          <button mat-button matStepperPrevious>Voltar</button>
+          <button mat-raised-button color="accent" matStepperNext>
+            Continuar
+          </button>
+        </div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Pré-consulta</ng-template>
+        <p>Teste.</p>
+        <div>
+          <button mat-button matStepperPrevious>Voltar</button>
+          <!-- <button mat-button (click)="stepper.reset()">Resetar</button> -->
+          <button mat-raised-button color="primary" matStepperPrevious>
+            Concluir
+          </button>
         </div>
       </mat-step>
     </mat-horizontal-stepper>

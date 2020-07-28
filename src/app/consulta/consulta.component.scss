@@ -1,5 +1,51 @@
-#avatar {
-  border-radius: 96px;
-  border: 1px solid #333;
-  margin-bottom: 10px;
+div#consulta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  mat-card {
+    #avatar {
+      border-radius: 96px;
+      border: 1px solid #333;
+      margin-bottom: 10px;
+      height: 96px;
+      width: 96px;
+    }
+    h1 {
+      color: #383b3f;
+      padding-top: 30px;
+    }
+    padding: 48px 40px 36px;
+    width: 100%;
+    max-width: 768px;
+  }
+}
+
+/**
+  * Rules for when the device is detected to be a small screen.
+  */
+@media (max-width: 768px) {
+  div#consulta {
+    display: block;
+    min-height: auto;
+    // text-align: center;
+    padding: 0;
+    mat-card {
+      display: block;
+      padding: 48px 40px 36px;
+      width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+      #logo {
+        width: 62%;
+        margin-bottom: 20px;
+      }
+      h1 {
+        color: #383b3f;
+        padding-top: 30px;
+      }
+    }
+  }
 }
