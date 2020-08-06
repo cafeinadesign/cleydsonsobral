@@ -4,32 +4,35 @@
       <img id="logo" src="assets/logo.svg" alt="Cleydson Sobral" height="24" />
     </div>
     <mat-horizontal-stepper #stepper>
-      <mat-step [stepControl]="firstFormGroup" errorMessage="Name is required.">
-        <form [formGroup]="firstFormGroup">
+      <mat-step [stepControl]="customerForm" errorMessage="CPF é obrigatório">
+        <form [formGroup]="customerForm">
           <div *ngIf="auth.user | async as user">
             <img [src]="user.photoURL" [alt]="user.displayName" id="avatar" />
             <h1 class="mat-headline">Olá, {{ user.displayName }}</h1>
           </div>
           <ng-template matStepLabel>Dados pessoais</ng-template>
+          <h2 class="mat-title">Dados pessoais</h2>
           <mat-form-field appearance="outline">
             <mat-label>CPF</mat-label>
             <input
               type="tel"
               matInput
               placeholder="Digite seu CPF"
-              formControlName="cpfCtrl"
+              id="cpf"
+              name="cpf"
+              formControlName="cpf"
               required
             />
           </mat-form-field>
           <div>
             <h2 class="mat-title">Contato</h2>
             <mat-form-field appearance="outline">
-              <mat-label>Telefone</mat-label>
+              <mat-label>Telefone/WhatsApp</mat-label>
               <input
                 type="tel"
                 matInput
                 placeholder="Digite seu Telefone"
-                formControlName="telefoneCtrl"
+                formControlName="phone_number"
                 required
               />
             </mat-form-field>
@@ -44,6 +47,7 @@
                 placeholder="Digite seu CEP"
                 formControlName="cepCtrl"
                 required
+                (change)="buscaCEP()"
               />
             </mat-form-field>
             <mat-form-field appearance="outline" style="width: 72px;">
@@ -65,7 +69,6 @@
                 matInput
                 placeholder="Digite seu Complemento"
                 formControlName="complementoCtrl"
-                required
               />
             </mat-form-field>
           </div>
@@ -74,6 +77,100 @@
               Continuar
             </button>
           </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Pagamento</ng-template>
+        <form [formGroup]="cardForm" (ngSubmit)="onSubmit(cardForm.value)">
+          <div>
+            <h1 class="mat-headline">Realizar pagamento</h1>
+            <h2 class="mat-title">
+              Valor total: R$
+              {{ valorTotal / 100 | currency: "R$" }}
+            </h2>
+            <mat-form-field appearance="outline" style="width: 260px;">
+              <mat-label>Número do cartão</mat-label>
+              <input
+                type="tel"
+                matInput
+                placeholder="Número do cartão"
+                id="card_number"
+                name="card_number"
+                formControlName="card_number"
+                required
+              />
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="outline" style="width: 260px;">
+              <mat-label>Nome como escrito no cartão</mat-label>
+              <input
+                type="text"
+                matInput
+                placeholder="Seu nome como escrito no cartão"
+                id="card_holder_name"
+                name="card_holder_name"
+                formControlName="card_holder_name"
+                required
+              />
+            </mat-form-field>
+          </div>
+          <mat-form-field
+            appearance="outline"
+            style="margin-right: 10px; width: 120px;"
+          >
+            <mat-label>Validade</mat-label>
+            <input
+              matInput
+              type="tel"
+              id="card_expiration_date"
+              name="card_expiration_date"
+              formControlName="card_expiration_date"
+              placeholder="MM/AA"
+              maxlength="5"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field appearance="outline" style="width: 130px;">
+            <mat-label>CVV</mat-label>
+            <input
+              matInput
+              type="tel"
+              id="card_cvv"
+              name="card_cvv"
+              formControlName="card_cvv"
+              placeholder="Código de segurança"
+              maxlength="5"
+              required
+            />
+          </mat-form-field>
+          <div>
+            <mat-form-field appearance="fill" style="width: 260px;">
+              <mat-label>Parcelas</mat-label>
+              <select
+                formControlName="installments"
+                matNativeControl
+                required
+                (change)="quantidadeParcelas(cardForm.value.installments)"
+              >
+                <option value="1">1x de R$470,00 - sem juros</option>
+                <option value="2">2x de R$244,40 - com juros (2% a.m.)</option>
+                <option value="3">3x de R$166,07 - com juros (2% a.m.)</option>
+              </select>
+            </mat-form-field>
+          </div>
+          <div style="margin-bottom: 20px;">
+            <button
+              type="submit"
+              mat-raised-button
+              color="accent"
+              style="width: 260px; font-size: 16px; font-weight: 1000;"
+            >
+              <mat-icon>lock</mat-icon>
+              Pagar {{ valorTotal / 100 | currency: "R$" }}
+            </button>
+          </div>
+          <button mat-button matStepperPrevious>Voltar</button>
         </form>
       </mat-step>
       <mat-step
@@ -120,16 +217,6 @@
             </button>
           </div>
         </form>
-      </mat-step>
-      <mat-step>
-        <ng-template matStepLabel>Pagamento</ng-template>
-        <p>Teste.</p>
-        <div>
-          <button mat-button matStepperPrevious>Voltar</button>
-          <button mat-raised-button color="accent" matStepperNext>
-            Continuar
-          </button>
-        </div>
       </mat-step>
       <mat-step>
         <ng-template matStepLabel>Pré-consulta</ng-template>
