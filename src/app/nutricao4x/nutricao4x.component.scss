@@ -98,7 +98,7 @@ section.bg-white {
   }
 }
 section#valores,
-section#consultoria {
+section#consulta {
   background-color: #383b3f;
   color: white;
   padding: 30px 0;
@@ -173,6 +173,18 @@ section#valor {
   }
   img {
     width: 100%;
+  }
+}
+
+#servico {
+  padding: 30px 0;
+  h1,
+  h2 {
+    text-align: center;
+  }
+  h1.mat-display-1 {
+    color: #df7b2a;
+    margin-bottom: 0;
   }
 }
 

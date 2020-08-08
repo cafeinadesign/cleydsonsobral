@@ -134,7 +134,10 @@ h3.mat-subheading-2,
 input.mat-input-element,
 .mat-radio-button,
 .mat-stepper-vertical,
-.mat-stepper-horizontal {
+.mat-stepper-horizontal,
+dl,
+dt,
+dd {
   font-family: "Barlow", sans-serif;
 }
 
