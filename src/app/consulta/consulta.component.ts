@@ -1,3 +1,4 @@
+import { Endereco } from './../endereco';
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -5,6 +6,8 @@ import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import pagarme from 'pagarme/browser';
 import { environment } from 'src/environments/environment';
+import { User } from 'firebase';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-consulta',
@@ -18,49 +21,40 @@ import { environment } from 'src/environments/environment';
   ],
 })
 export class ConsultaComponent implements OnInit {
+  usuario: User;
   cardForm;
-  carregando = true;
-  card = {
-    card_holder_name: '',
-    card_expiration_date: '',
-    card_number: '',
-    card_cvv: '',
-  };
-  customer = {
-    external_id: '',
-    name: '',
-    type: 'individual',
-    country: 'br',
-    email: '',
-    documents: [
-      {
-        type: 'cpf',
-        number: '',
-      },
-    ],
-    phone_numbers: [''],
-  };
   customerForm: FormGroup;
   secondFormGroup: FormGroup;
   valorTotal = 47000;
-
+  carregando = true;
+  endereco = 'Pesquise seu endereço pelo CEP';
+  address: Endereco = {
+    state: '',
+    city: '',
+    neighborhood: '',
+    street: '',
+    street_number: '',
+    zipcode: '',
+  };
   constructor(
     public auth: AngularFireAuth,
     private formBuilder: FormBuilder,
     private http: HttpClient
   ) {
     this.customerForm = this.formBuilder.group({
-      cpf: ['', Validators.required],
-      phone_number: ['', Validators.required],
-      cepCtrl: ['', Validators.required],
-      nCtrl: ['', Validators.required],
-      complementoCtrl: [''],
+      name: ['Morpheus Fishburne', Validators.required],
+      cpf: ['30621143049', Validators.required],
+      birthday: ['1965-01-01'],
+      phone_number: ['11999998888', Validators.required],
+      cepCtrl: ['06714360', Validators.required],
+      street_number: ['9999', Validators.required],
+      complementary: [''],
     });
     this.cardForm = this.formBuilder.group({
-      card_holder_name: ['', Validators.required],
-      card_expiration_date: ['', Validators.required],
-      card_number: ['', Validators.required],
-      card_cvv: ['', Validators.required],
+      card_holder_name: ['Morpheus Fishburne', Validators.required],
+      card_expiration_date: ['09/22', Validators.required],
+      card_number: ['4111111111111111', Validators.required],
+      card_cvv: ['123', Validators.required],
       installments: ['1', Validators.required],
     });
     this.secondFormGroup = this.formBuilder.group({
@@ -68,7 +62,13 @@ export class ConsultaComponent implements OnInit {
     });
   }
 
+  ngOnInit(): void {
+    this.carregando = false;
+    this.auth.user.subscribe((usuario) => (this.usuario = usuario));
+  }
+
   onSubmit(cardData): any {
+    // campos obrigatórios
     if (
       !cardData.card_number &&
       !cardData.card_holder_name &&
@@ -78,7 +78,7 @@ export class ConsultaComponent implements OnInit {
       return false;
     }
     // Process checkout data here
-    // this.items = this.cartService.clearCart();
+    cardData.card_number = cardData.card_number.replace(/\D/g, '');
     // pega os erros de validação nos campos do form e a bandeira do cartão
     const cardValidations = pagarme.validate({
       card: cardData,
@@ -99,31 +99,98 @@ export class ConsultaComponent implements OnInit {
     } else if (!cardValidations.card.card_number) {
       alert('Oops, número do cartão incorreto');
     } else {
+      this.carregando = true;
       // Mas caso esteja tudo certo, você pode seguir o fluxo
       pagarme.client
         .connect({ encryption_key: environment.pagarme.encryptionKey })
         .then((client) => client.security.encrypt(cardData))
         .then((CARD_HASH) => {
-          console.log('CARD_HASH', CARD_HASH);
-          const httpOptions = {
-            headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
-          };
+          console.log('birthday', this.customerForm.value.birthday);
           this.http
-            .post(
-              'http://localhost:5001/cleydson-sobral/us-central1/pagar',
+            .post('http://localhost:5001/cleydson-sobral/us-central1/pagar', {
               CARD_HASH,
-              httpOptions
-            )
+              installments: cardData.installments,
+              card_expiration_date: cardData.card_expiration_date,
+              card_holder_name: cardData.card_holder_name,
+              customer: {
+                external_id: this.usuario.uid,
+                name: this.customerForm.value.name,
+                email: this.usuario.email,
+                documents: [
+                  { number: this.customerForm.value.cpf.replace(/\D/g, '') },
+                ],
+                phone_numbers: [
+                  '+55' +
+                    this.customerForm.value.phone_number.replace(/\D/g, ''),
+                ],
+                birthday: this.customerForm.value.birthday,
+              },
+              billing: {
+                address: {
+                  state: this.address.state,
+                  city: this.address.city,
+                  neighborhood: this.address.neighborhood,
+                  street: this.address.street,
+                  street_number: this.customerForm.value.street_number,
+                  complementary: this.customerForm.value.complementary,
+                  zipcode: this.address.zipcode,
+                },
+              },
+            })
             .subscribe(
-              (res) => {
-                console.log('res', res);
+              (res: any) => {
+                // console.error('deu erro', res);
+                console.log('res.response', res.response);
+                // deu erro
+                if (res.name === 'ApiError') {
+                  if (res.response.errors[0].message === 'Invalid CPF') {
+                    alert('Ops... CPF inválido!');
+                  } else if (
+                    res.response.errors[0].parameter_name === 'customer'
+                  ) {
+                    alert(
+                      'Ops... Confirme seus dados pessoais, como CPF e nome, estão corretos!\nNo telefone adicione o número e o DDD.'
+                    );
+                  } else if (
+                    res.response.errors[0].message ===
+                    '"state" is not allowed to be empty'
+                  ) {
+                    alert(
+                      'Ops... Endereço inválido! Confime se seu CEP está correto.'
+                    );
+                  } else if (
+                    res.response.errors[0].parameter_name === 'billing'
+                  ) {
+                    alert(
+                      'Ops... Endereço inválido! Confime se seu CEP ou complemento estão corretos.'
+                    );
+                  } else {
+                    alert(
+                      'Ops... Ocorreu algum erro.\n' +
+                        'Confirme se seus dados estão corretos e tente novamente.'
+                    );
+                  }
+                } else {
+                  console.error('agora foi ' + res.status, res);
+                  switch (res.status) {
+                    case 'refused':
+                      alert('Pagamento foi recusado');
+                      break;
+
+                    case 'paid':
+                      alert('Pagamento realizado com sucesso xD');
+                      break;
+                  }
+                }
               },
               (err) => {
+                this.carregando = false;
                 console.error('ops... deu erro: ', err);
                 alert(
                   'Ops... Ocorreu algum erro, por favor entre em contato com o adminstrador do site.'
                 );
-              }
+              },
+              () => (this.carregando = false)
             );
         });
       // o próximo passo aqui é enviar o CARD_HASH para seu servidor, e
@@ -131,26 +198,49 @@ export class ConsultaComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-    this.carregando = false;
-  }
-
-  pagar(): void {
-    // pega os erros de validação nos campos do form e a bandeira do cartão
-    const cardValidations = pagarme.validate({ card: this.card });
-    if (cardValidations) {
-      pagarme.client
-        .connect({
-          encryption_key: 'ek_test_OSxEIhfFAQqcqaewfXUr9p9bNpQffG',
-        })
-        .then((client) => client.security.encrypt(this.card))
-        .then((card_hash) => console.log(card_hash));
+  buscaCEP(cep: string): void {
+    const zipcode = cep.replace(/-|\s/g, '');
+    if (zipcode.length > 7) {
+      this.endereco = 'Pesquisando...';
+      this.address = {
+        state: '',
+        city: '',
+        neighborhood: '',
+        street: '',
+        street_number: '',
+        zipcode: '',
+      };
+      this.http.get('https://api.pagar.me/1/zipcodes/' + zipcode).subscribe(
+        (res: Endereco) => {
+          // console.log(res);
+          this.address = res;
+        },
+        () => {
+          // console.error('não encontrou o CEP');
+          this.endereco = 'CEP não encontrado!';
+          // console.error(error);
+          this.address = {
+            state: '',
+            city: '',
+            neighborhood: '',
+            street: '',
+            street_number: '',
+            zipcode: '',
+          };
+        }
+      );
     } else {
-      alert('Oops, número de cartão incorreto');
+      this.endereco = 'Pesquise seu endereço pelo CEP';
+      this.address = {
+        state: '',
+        city: '',
+        neighborhood: '',
+        street: '',
+        street_number: '',
+        zipcode: '',
+      };
     }
   }
-
-  buscaCEP(): void {}
   quantidadeParcelas(installments): void {
     switch (installments) {
       case '1':

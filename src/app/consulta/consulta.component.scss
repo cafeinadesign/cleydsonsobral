@@ -9,7 +9,7 @@ div#consulta {
     #avatar {
       border-radius: 96px;
       border: 1px solid #333;
-      margin-bottom: 10px;
+      margin: 10px 0;
       height: 96px;
       width: 96px;
     }
@@ -17,9 +17,15 @@ div#consulta {
       color: #383b3f;
       padding-top: 30px;
     }
-    padding: 48px 40px 36px;
+    padding: 48px 24px 36px;
     width: 100%;
     max-width: 768px;
+    #cardForm {
+      background-position: right center;
+      background-image: url("../../assets/box-nutrição-4x.png");
+      background-size: auto 256px;
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -34,7 +40,7 @@ div#consulta {
     padding: 0;
     mat-card {
       display: block;
-      padding: 48px 40px 36px;
+      padding: 48px 24px 36px;
       width: 100%;
       border-radius: 0;
       box-shadow: none;
@@ -45,6 +51,9 @@ div#consulta {
       h1 {
         color: #383b3f;
         padding-top: 30px;
+      }
+      #cardForm {
+        background-image: none;
       }
     }
   }

@@ -35,6 +35,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { LembrarSenhaComponent } from './lembrar-senha/lembrar-senha.component';
 import { ConsultaComponent } from './consulta/consulta.component';
 
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 
@@ -76,6 +78,7 @@ registerLocaleData(localePt, 'pt-BR');
     MatInputModule,
     MatRadioModule,
     ReactiveFormsModule,
+    NgxMaskModule.forRoot(),
   ],
   providers: [Title, { provide: LOCALE_ID, useValue: 'pt-BR' }],
   bootstrap: [AppComponent],
