@@ -6,6 +6,9 @@ div#consulta {
   padding-top: 30px;
   padding-bottom: 30px;
   mat-card {
+    #logo {
+      margin: 0 0 20px 24px;
+    }
     #avatar {
       border-radius: 96px;
       border: 1px solid #333;
@@ -44,10 +47,6 @@ div#consulta {
       width: 100%;
       border-radius: 0;
       box-shadow: none;
-      #logo {
-        width: 62%;
-        margin-bottom: 20px;
-      }
       h1 {
         color: #383b3f;
         padding-top: 30px;

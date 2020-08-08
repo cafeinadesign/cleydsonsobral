@@ -35,7 +35,14 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { LembrarSenhaComponent } from './lembrar-senha/lembrar-senha.component';
 import { ConsultaComponent } from './consulta/consulta.component';
 
-import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { NgxMaskModule } from 'ngx-mask';
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
+// Note we need a separate function as it's required
+// by the AOT compiler.
+export function playerFactory() {
+  return player;
+}
 
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
@@ -79,6 +86,7 @@ registerLocaleData(localePt, 'pt-BR');
     MatRadioModule,
     ReactiveFormsModule,
     NgxMaskModule.forRoot(),
+    LottieModule.forRoot({ player: playerFactory }),
   ],
   providers: [Title, { provide: LOCALE_ID, useValue: 'pt-BR' }],
   bootstrap: [AppComponent],

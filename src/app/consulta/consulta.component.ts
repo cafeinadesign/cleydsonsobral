@@ -7,7 +7,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import pagarme from 'pagarme/browser';
 import { environment } from 'src/environments/environment';
 import { User } from 'firebase';
-import { Observable } from 'rxjs';
+import { AnimationItem } from 'lottie-web';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-consulta',
@@ -24,7 +25,6 @@ export class ConsultaComponent implements OnInit {
   usuario: User;
   cardForm;
   customerForm: FormGroup;
-  secondFormGroup: FormGroup;
   valorTotal = 47000;
   carregando = true;
   endereco = 'Pesquise seu endereço pelo CEP';
@@ -36,35 +36,46 @@ export class ConsultaComponent implements OnInit {
     street_number: '',
     zipcode: '',
   };
+  private animationItem: AnimationItem;
+  options: AnimationOptions = {
+    path: 'https://assets8.lottiefiles.com/datafiles/D7hmWWCXGWSQUPi/data.json',
+  };
+  sucesso: AnimationOptions = {
+    path: 'https://assets5.lottiefiles.com/datafiles/K6S8jDtSdQ7EPjH/data.json',
+    autoplay: false,
+    loop: false,
+  };
+  pagamentoProcessado = false;
+
   constructor(
     public auth: AngularFireAuth,
     private formBuilder: FormBuilder,
     private http: HttpClient
   ) {
     this.customerForm = this.formBuilder.group({
-      name: ['Morpheus Fishburne', Validators.required],
-      cpf: ['30621143049', Validators.required],
-      birthday: ['1965-01-01'],
-      phone_number: ['11999998888', Validators.required],
-      cepCtrl: ['06714360', Validators.required],
-      street_number: ['9999', Validators.required],
+      name: ['', Validators.required],
+      cpf: ['', Validators.required],
+      birthday: [''],
+      phone_number: ['', Validators.required],
+      cepCtrl: ['', Validators.required],
+      street_number: ['', Validators.required],
       complementary: [''],
     });
     this.cardForm = this.formBuilder.group({
-      card_holder_name: ['Morpheus Fishburne', Validators.required],
-      card_expiration_date: ['09/22', Validators.required],
-      card_number: ['4111111111111111', Validators.required],
-      card_cvv: ['123', Validators.required],
+      card_holder_name: ['', Validators.required],
+      card_expiration_date: ['', Validators.required],
+      card_number: ['', Validators.required],
+      card_cvv: ['', Validators.required],
       installments: ['1', Validators.required],
-    });
-    this.secondFormGroup = this.formBuilder.group({
-      secondCtrl: ['', Validators.required],
     });
   }
 
   ngOnInit(): void {
     this.carregando = false;
     this.auth.user.subscribe((usuario) => (this.usuario = usuario));
+  }
+  animationCreated(animationItem: AnimationItem): void {
+    this.animationItem = animationItem;
   }
 
   onSubmit(cardData): any {
@@ -107,7 +118,7 @@ export class ConsultaComponent implements OnInit {
         .then((CARD_HASH) => {
           console.log('birthday', this.customerForm.value.birthday);
           this.http
-            .post('http://localhost:5001/cleydson-sobral/us-central1/pagar', {
+            .post(environment.pagarme.url + '/pagar', {
               CARD_HASH,
               installments: cardData.installments,
               card_expiration_date: cardData.card_expiration_date,
@@ -176,9 +187,10 @@ export class ConsultaComponent implements OnInit {
                     case 'refused':
                       alert('Pagamento foi recusado');
                       break;
-
                     case 'paid':
-                      alert('Pagamento realizado com sucesso xD');
+                      // alert('Pagamento realizado com sucesso xD');
+                      this.pagamentoProcessado = true;
+                      this.animationItem.play();
                       break;
                   }
                 }

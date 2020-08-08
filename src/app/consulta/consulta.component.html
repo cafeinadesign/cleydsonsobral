@@ -1,9 +1,9 @@
 <div id="consulta">
   <mat-card>
-    <div style="padding: 0 0 10px 24px;">
+    <div>
       <img id="logo" src="assets/logo.svg" alt="Cleydson Sobral" height="24" />
     </div>
-    <mat-horizontal-stepper #stepper>
+    <mat-horizontal-stepper linear #stepper>
       <mat-step [stepControl]="customerForm" errorMessage="CPF é obrigatório">
         <form [formGroup]="customerForm">
           <img
@@ -141,10 +141,35 @@
       </mat-step>
       <mat-step>
         <ng-template matStepLabel>Pagamento</ng-template>
+        <div style="text-align: center;" [hidden]="!pagamentoProcessado">
+          <h1 class="mat-headline">Pagamento realizado com sucesso</h1>
+          <h2 class="mat-title">
+            Você está a poucos passos de transformar a sua vida
+          </h2>
+          <div style="margin: 30px auto 0; width: 33%;">
+            <ng-lottie
+              [options]="sucesso"
+              (animationCreated)="animationCreated($event)"
+              [hidden]="!pagamentoProcessado"
+            ></ng-lottie>
+          </div>
+          <button
+            mat-raised-button
+            color="primary"
+            matStepperNext
+            style="width: 260px;"
+          >
+            Continuar
+          </button>
+        </div>
+        <div style="margin: 30px auto 0; width: 33%;" [hidden]="!carregando">
+          <ng-lottie [options]="options"></ng-lottie>
+        </div>
         <form
           id="cardForm"
           [formGroup]="cardForm"
           (ngSubmit)="onSubmit(cardForm.value)"
+          [hidden]="carregando || pagamentoProcessado"
         >
           <div>
             <h1 class="mat-headline">Realizar pagamento</h1>
@@ -247,60 +272,53 @@
           <button mat-button matStepperPrevious>Voltar</button>
         </form>
       </mat-step>
-      <mat-step
-        [stepControl]="secondFormGroup"
-        errorMessage="Address is required."
-      >
-        <form [formGroup]="secondFormGroup">
-          <ng-template matStepLabel>Agendamento</ng-template>
-          <h1 class="mat-headline">Selecione horário de preferência</h1>
-          <p class="mat-body-2">
-            Horário sujeito a confirmação do meu secretário
-          </p>
-          <h2 class="mat-title">Horário de atendimento:</h2>
-          <p>
-            Terça e Sexta 6:00 7:30 9:00 10:30<br />
-            Quarta e quinta 13:00 14:30 16:00 17:30
-          </p>
-          <p>Dia da semana de preferência</p>
-          <mat-radio-group aria-label="Dia da semana de preferência">
-            <mat-radio-button value="1">Terça-feira</mat-radio-button>
-            <mat-radio-button value="2">Quarta-feira</mat-radio-button>
-            <mat-radio-button value="3">Quinta-feira</mat-radio-button>
-            <mat-radio-button value="4">Sexta-feira</mat-radio-button>
-          </mat-radio-group>
-          <div>
-            <p>Horário de preferência</p>
-            <mat-radio-group aria-label="Dia da semana de preferência">
-              Manhã:
-              <mat-radio-button value="6:00">6:00</mat-radio-button>
-              <mat-radio-button value="7:30">7:30</mat-radio-button>
-              <mat-radio-button value="9:00">9:00</mat-radio-button>
-              <mat-radio-button value="10:30">10:30</mat-radio-button><br />
-              Tarde:
-              <mat-radio-button value="13:00">13:00</mat-radio-button>
-              <mat-radio-button value="14:30">14:30</mat-radio-button>
-              <mat-radio-button value="16:00">16:00</mat-radio-button>
-              <mat-radio-button value="17:30">17:30</mat-radio-button>
-            </mat-radio-group>
-          </div>
-          <div>
-            <button mat-button matStepperPrevious>Voltar</button>
-            <button mat-raised-button color="accent" matStepperNext>
-              Continuar
-            </button>
-          </div>
-        </form>
+      <mat-step editable="false">
+        <ng-template matStepLabel>Agendamento</ng-template>
+        <h1 class="mat-headline">Agendamento</h1>
+        <h2 class="mat-title">Horário de atendimento:</h2>
+        <p>
+          Terça e Sexta 6:00 7:30 9:00 10:30<br />
+          Quarta e quinta 13:00 14:30 16:00 17:30
+        </p>
+        <p class="mat-body-2">Agora marque o horário com meu secretário</p>
+        <a
+          mat-button
+          aria-label="Cleydson Sobral no WhatsApp"
+          target="_blank"
+          rel="noopener"
+          href="https://api.whatsapp.com/send?phone=55819040213&text=Ol%C3%A1%20Cleydson%20Sobral%2C%20quero%20agendar%20uma%20consulta%20com%20voc%C3%AA!"
+          title="WhatsApp"
+          class="mat-headline"
+        >
+          <img src="assets/img/whatsapp.svg" alt="whatsapp" height="42" />
+          (81) 9405-0213
+        </a>
+        <div>
+          <button
+            mat-raised-button
+            color="accent"
+            matStepperNext
+            style="margin-top: 30px;"
+          >
+            Continuar
+          </button>
+        </div>
       </mat-step>
-      <mat-step>
+      <mat-step editable="false">
         <ng-template matStepLabel>Pré-consulta</ng-template>
-        <p>Teste.</p>
+        <h1 class="mat-headline">Pré-consulta</h1>
+        <h2 class="mat-title">Vamos iniciar a nossa conversa?</h2>
         <div>
           <button mat-button matStepperPrevious>Voltar</button>
           <!-- <button mat-button (click)="stepper.reset()">Resetar</button> -->
-          <button mat-raised-button color="primary" matStepperPrevious>
-            Concluir
-          </button>
+          <a
+            href="https://omundo.typeform.com/to/Fdabmx"
+            mat-raised-button
+            color="primary"
+            matStepperPrevious
+          >
+            Fazer a pré-consulta agora
+          </a>
         </div>
       </mat-step>
     </mat-horizontal-stepper>

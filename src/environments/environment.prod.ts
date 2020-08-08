@@ -12,5 +12,6 @@ export const environment = {
   },
   pagarme: {
     encryptionKey: 'ek_live_mOnDtgsLdZMOKkj1bwN3mIk7ycEQP5',
+    url: 'http://localhost:5001/cleydson-sobral/us-central1',
   },
 };

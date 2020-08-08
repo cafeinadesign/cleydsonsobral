@@ -12,17 +12,18 @@ exports.pagar = functions.https.onRequest((req, res) => {
     // res.statusCode = 200;
     // res.json(req.body.card_hash);
     // Grab the text parameter.
-    const api_key_test = "ak_test_czTtptNuS6s1GR5DjVlTKfynYvXSus";
+    // const api_key_test = "ak_test_czTtptNuS6s1GR5DjVlTKfynYvXSus";
+    const api_key = "ak_live_QYD89scaEFGgzzpJdCTFX2yr4SSoL7";
     var amount = 47000;
     switch (req.body.installments) {
       case "1":
-        var amount = 47000;
+        amount = 47000;
         break;
       case "2":
-        var amount = 48880;
+        amount = 48880;
         break;
       case "3":
-        var amount = 49820;
+        amount = 49820;
         break;
     }
     let transaction = {
@@ -76,7 +77,7 @@ exports.pagar = functions.https.onRequest((req, res) => {
         req.body.billing.address.complementary;
     }
     pagarme.client
-      .connect({ api_key: api_key_test })
+      .connect({ api_key: api_key })
       .then((client) => {
         client.transactions
           .create(transaction)
@@ -87,11 +88,13 @@ exports.pagar = functions.https.onRequest((req, res) => {
             res.json({
               status: transactions.status,
             });
+            return null;
           })
           .catch((error) => {
             console.error("Rua: ", req.body.billing.address.street);
             res.json(error);
           });
+        return null;
       })
       .catch((error) => {
         // console.error("Ola mundo");
