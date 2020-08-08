@@ -1,6 +1,10 @@
 nav > mat-toolbar {
   a#logo {
     margin-right: 30px;
+    img {
+      width: auto;
+      height: 20px;
+    }
   }
   a.mat-button {
     font-family: "Barlow", sans-serif;
@@ -33,10 +37,6 @@ nav > mat-toolbar {
   nav > mat-toolbar {
     a#logo {
       margin-right: 10px;
-      img {
-        width: 100%;
-        height: auto;
-      }
     }
   }
   nav.show-small {

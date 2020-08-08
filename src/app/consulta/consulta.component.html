@@ -1,8 +1,8 @@
 <div id="consulta">
   <mat-card>
-    <div>
+    <a routerLink="/">
       <img id="logo" src="assets/logo.svg" alt="Cleydson Sobral" height="24" />
-    </div>
+    </a>
     <mat-horizontal-stepper linear #stepper>
       <mat-step [stepControl]="customerForm" errorMessage="CPF é obrigatório">
         <form [formGroup]="customerForm">
@@ -280,9 +280,12 @@
           Terça e Sexta 6:00 7:30 9:00 10:30<br />
           Quarta e quinta 13:00 14:30 16:00 17:30
         </p>
-        <p class="mat-body-2">Agora marque o horário com meu secretário</p>
+        <p class="mat-body-2">
+          Entre em contato conosco via Whatsapp e escolha o melhor horário pra
+          sua consulta
+        </p>
         <a
-          mat-button
+          mat-raised-button
           aria-label="Cleydson Sobral no WhatsApp"
           target="_blank"
           rel="noopener"
@@ -291,7 +294,7 @@
           class="mat-headline"
         >
           <img src="assets/img/whatsapp.svg" alt="whatsapp" height="42" />
-          (81) 9405-0213
+          (81) 99405-0213
         </a>
         <div>
           <button
