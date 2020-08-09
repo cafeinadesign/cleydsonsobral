@@ -4,7 +4,7 @@
       <img id="logo" src="assets/logo.svg" alt="Cleydson Sobral" height="24" />
     </a>
     <mat-horizontal-stepper linear #stepper>
-      <mat-step [stepControl]="customerForm" errorMessage="CPF é obrigatório">
+      <mat-step [stepControl]="customerForm">
         <form [formGroup]="customerForm">
           <img
             [src]="usuario?.photoURL"
@@ -285,15 +285,14 @@
           sua consulta
         </p>
         <a
-          mat-raised-button
+          mat-button
           aria-label="Cleydson Sobral no WhatsApp"
           target="_blank"
           rel="noopener"
           href="https://api.whatsapp.com/send?phone=55819040213&text=Ol%C3%A1%20Cleydson%20Sobral%2C%20quero%20agendar%20uma%20consulta%20com%20voc%C3%AA!"
           title="WhatsApp"
-          class="mat-headline"
         >
-          <img src="assets/img/whatsapp.svg" alt="whatsapp" height="42" />
+          <img src="assets/img/whatsapp.svg" alt="whatsapp" height="28" />
           (81) 99405-0213
         </a>
         <div>

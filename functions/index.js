@@ -12,8 +12,8 @@ exports.pagar = functions.https.onRequest((req, res) => {
     // res.statusCode = 200;
     // res.json(req.body.card_hash);
     // Grab the text parameter.
-    // const api_key_test = "ak_test_czTtptNuS6s1GR5DjVlTKfynYvXSus";
-    const api_key = "ak_live_QYD89scaEFGgzzpJdCTFX2yr4SSoL7";
+    const api_key = "ak_test_czTtptNuS6s1GR5DjVlTKfynYvXSus";
+    // const api_key = "ak_live_QYD89scaEFGgzzpJdCTFX2yr4SSoL7";
     var amount = 47000;
     switch (req.body.installments) {
       case "1":

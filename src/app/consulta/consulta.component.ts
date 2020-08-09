@@ -182,7 +182,7 @@ export class ConsultaComponent implements OnInit {
                     );
                   }
                 } else {
-                  console.error('agora foi ' + res.status, res);
+                  console.log('agora foi ' + res.status, res);
                   switch (res.status) {
                     case 'refused':
                       alert('Pagamento foi recusado');

@@ -1,93 +1,101 @@
 <app-navbar></app-navbar>
-<header class="mat-elevation-z6">
+<header>
   <div class="header">
     <div class="container">
       <h1 class="mat-display-3">O Básico que Funciona!</h1>
       <h2 class="mat-headline">Resultados Sustentáveis são Possíveis.</h2>
       <h3 class="mat-subheading-2">Cleydson Sobral - Nutricionista</h3>
-      <!-- <a (click)="login()" mat-raised-button color="primary"> -->
       <a routerLink="/nutricao4x" mat-raised-button color="primary">
         <mat-icon>videocam</mat-icon> Agendar Consulta
       </a>
-      <a href="#nutricionista" title="Nutricionista Cleydson Sobral" mat-button
+      <a
+        href="#nutricionista"
+        title="Nutricionista Cleydson Sobral"
+        mat-button
+        style="text-shadow: 1px 1px 4px #383b3f;"
         >Saiba mais</a
       >
     </div>
   </div>
 </header>
-<main id="nutricionista" class="container">
-  <div class="row">
-    <div class="col-sm-8">
-      <h1 class="mat-display-1">Cleydson Sobral</h1>
-      <h2>Quem sou eu?</h2>
-      <p>
-        <strong
-          >Sou nutricionista e atuo na área de saúde corporal desde de
-          2003</strong
-        >
-        ajudando pessoas normais como você a conseguir alcançar seus objetivos.
-        Desde de 2012 me dedico exclusivamente ao atendimento em consultório,
-        atuando com orientação alimentar para quem tem o objetivo de
-        <strong
-          >emagrecer, ganho de massa muscular, melhoria da saúde e qualidade de
-          vida</strong
-        >.
-      </p>
-      <p>
-        Caso você não me conheça, eu passo dicas diariamente em meu Instagram
-        abordando assuntos como:
-        <strong
-          >Reeducação Alimentar, Emagrecimento, Hipertrofia, Comportamento
-          Alimentar, Mitos e Verdades sobre Alimentos e Melhoria de
-          Performance</strong
-        >, tirando diversas dúvidas que surgem.
-      </p>
-      <p>
-        A verdade é uma só, não existe mágica, existe persistência, prioridades
-        e vontade de querer mudar, a chave pra isso acontecer está bem perto de
-        você. Meu trabalho é apenas mostrar onde essa chave está escondida.
-      </p>
-      <p>Agora um resumo das minhas especialidades:</p>
-      <ul>
-        <li>Graduado em Nutrição</li>
-        <li>Graduado em Educação Física</li>
-        <li>Pós-Graduado em Treinamento de Força</li>
-        <li>Pós-Graduado em Nutrição Esportiva</li>
-        <li>Pós-Graduado em Tratamento da Obesidade e Emagrecimento</li>
-      </ul>
-      <p>
-        Atualmente já passaram por mim mais de 5 mil pacientes, e você pode ser
-        o próximo(a). Estou bem feliz em poder lhe ajudar a alcançar a saúde,
-        <strong>qualidade de vida e bem estar que tanto deseja</strong>.
-      </p>
-      <p>
-        Podemos começar juntos agora mesmo. Vamos impulsionar seu bem estar
-        físico e mental?
-      </p>
-    </div>
-    <div id="fotoperfil" class="col-sm-4">
-      <picture>
-        <source
-          srcset="assets/img/cleydsonsobral.webp"
-          alt="Cleydson Sobral"
-          width="100%"
-          class="mat-elevation-z4"
-          type="image/webp"
-        />
-        <source
-          srcset="assets/img/cleydsonsobral.jpeg"
-          alt="Cleydson Sobral"
-          width="100%"
-          class="mat-elevation-z4"
-          type="image/jpeg"
-        />
-        <img
-          src="assets/img/cleydsonsobral.jpeg"
-          alt="Cleydson Sobral"
-          width="100%"
-          class="mat-elevation-z4"
-        />
-      </picture>
+<main id="nutricionista">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1 class="mat-display-1">Cleydson Sobral</h1>
+        <h2>Quem sou eu?</h2>
+        <p>
+          <strong
+            >Sou nutricionista e atuo na área de saúde corporal desde de
+            2003</strong
+          >
+          ajudando pessoas normais como você a conseguir alcançar seus
+          objetivos. A partir de 2012, me dedico exclusivamente ao atendimento
+          em consultório, atuando com orientação alimentar para quem tem o
+          objetivo de
+          <strong
+            >emagrecer, ganho de massa muscular, melhoria da saúde e qualidade
+            de vida</strong
+          >.
+        </p>
+        <p>
+          Caso você não me conheça, eu passo dicas diariamente em meu Instagram
+          abordando assuntos como:
+          <strong
+            >Reeducação Alimentar, Emagrecimento, Hipertrofia, Comportamento
+            Alimentar, Mitos e Verdades sobre Alimentos e Melhoria de
+            Performance</strong
+          >, tirando diversas dúvidas que surgem.
+        </p>
+        <p>
+          A verdade é uma só, não existe mágica, existe persistência,
+          prioridades e vontade de querer mudar, a chave pra isso acontecer está
+          bem perto de você. Meu trabalho é apenas mostrar onde essa chave está
+          escondida.
+        </p>
+        <p>Agora um resumo das minhas especialidades:</p>
+        <ul>
+          <li>Graduado em Nutrição</li>
+          <li>Graduado em Educação Física</li>
+          <li>Pós-Graduado em Treinamento de Força</li>
+          <li>Pós-Graduado em Nutrição Esportiva</li>
+          <li>Pós-Graduado em Tratamento da Obesidade e Emagrecimento</li>
+        </ul>
+        <p>
+          Atualmente já passaram por mim mais de 5 mil pacientes, e você pode
+          ser o próximo(a). Estou bem feliz em poder lhe ajudar a alcançar a
+          saúde,
+          <strong>qualidade de vida e bem estar que tanto deseja</strong>.
+        </p>
+        <p>
+          Podemos começar juntos agora mesmo. Vamos impulsionar seu bem estar
+          físico e mental?
+        </p>
+      </div>
+      <div id="fotoperfil" class="col-sm-4">
+        <picture>
+          <source
+            srcset="assets/img/cleydsonsobral.webp"
+            alt="Cleydson Sobral"
+            width="100%"
+            class="mat-elevation-z4"
+            type="image/webp"
+          />
+          <source
+            srcset="assets/img/cleydsonsobral.jpeg"
+            alt="Cleydson Sobral"
+            width="100%"
+            class="mat-elevation-z4"
+            type="image/jpeg"
+          />
+          <img
+            src="assets/img/cleydsonsobral.jpeg"
+            alt="Cleydson Sobral"
+            width="100%"
+            class="mat-elevation-z4"
+          />
+        </picture>
+      </div>
     </div>
   </div>
 </main>
@@ -234,7 +242,7 @@
 </section>
 <section id="redesociais">
   <div class="container">
-    <h1 class="mat-display-1">
+    <h1 class="mat-headline">
       Me siga no Instagram e entre em contato pelo WhatsApp
     </h1>
     <a
@@ -249,7 +257,7 @@
       <img
         src="assets/img/instagram.svg"
         alt="instagram"
-        height="36"
+        height="24"
         style="margin-right: 3px;"
       />
       @cleydsonsobral
@@ -263,7 +271,7 @@
       title="WhatsApp"
       class="mat-headline"
     >
-      <img src="assets/img/whatsapp.svg" alt="whatsapp" height="42" />
+      <img src="assets/img/whatsapp.svg" alt="whatsapp" height="26" />
       (81) 99405-0213
     </a>
   </div>

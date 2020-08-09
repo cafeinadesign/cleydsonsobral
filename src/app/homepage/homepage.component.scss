@@ -4,19 +4,16 @@ button {
   font-family: "Barlow", sans-serif;
 }
 header {
-  background-image: url("../../assets/arroz-feijao.jpg");
-  background-position: center center;
-  background-size: cover;
-  margin-bottom: 40px;
+  background: #383b3f;
+  background-image: url("../../assets/prato-arroz-feijao.png");
+  // background-image: url("../../assets/arroz-feijao.jpg");
+  background-position: right center;
+  background-size: auto 90%;
+  background-repeat: no-repeat;
+  // margin-bottom: 40px;
+  color: whitesmoke;
   div.header {
     padding: 60px 0;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-      102deg,
-      rgba(0, 0, 0, 0.5) 50%,
-      rgba(0, 0, 0, 0) 82%
-    );
-    background-position: bottom center;
   }
   h1.mat-display-3 {
     font-family: "Archivo", sans-serif;
@@ -28,8 +25,8 @@ header {
   h1.mat-display-3,
   h2.mat-headline,
   h3.mat-subheading-2 {
-    color: #fff;
-    text-shadow: 2px 2px 8px #000;
+    color: whitesmoke;
+    text-shadow: 2px 2px 8px #383b3f;
   }
   h1.mat-display-3 {
     // font-weight: 300;
@@ -40,7 +37,7 @@ header {
     margin-bottom: 40px;
   }
   .mat-button {
-    color: white;
+    // color: white;
     margin-left: 15px;
   }
 }
@@ -48,12 +45,14 @@ header {
   border-radius: 20px;
 }
 main {
+  color: #383b3f;
+  padding-top: 30px;
+  background-color: whitesmoke;
   h1.mat-display-1 {
     color: #df7b2a;
-    margin: 20px 0 26px;
+    margin: 20px 0 10px;
   }
   h2 {
-    color: #383b3f;
     font-weight: normal;
   }
   #fotoperfil {
@@ -64,10 +63,12 @@ main {
 section {
   padding: 30px 0;
 }
+section#missao {
+  background-color: #383b3f;
+  color: whitesmoke;
+}
 section#missao,
 section#valor {
-  background-color: #383b3f;
-  color: #fff;
   ul {
     padding-inline-start: 0;
   }
@@ -130,12 +131,14 @@ main#agendar {
 }
 
 #redesociais {
+  color: #383b3f;
+  background-color: whitesmoke;
   text-align: center;
   h1.mat-display-1 {
     margin-bottom: 30px;
   }
   a.mat-button {
-    font-size: 28px;
+    font-size: 18px;
     margin: 10px 0;
   }
 }
@@ -159,17 +162,9 @@ main#agendar > div {
     */
 @media (max-width: 768px) {
   header {
-    background-image: url("../../assets/arroz-feijao-mobile.jpg");
-    background-position-x: right;
-    background-position-y: bottom;
-    div.header {
-      background: rgb(0, 0, 0);
-      background: linear-gradient(
-        120deg,
-        rgba(0, 0, 0, 0.5) 62%,
-        rgba(0, 0, 0, 0) 100%
-      );
-    }
+    background-image: url("../../assets/prato-arroz-feijao.png");
+    background-size: 50%;
+    background-position: 121% 113%;
   }
   main {
     h1.mat-display-1 {

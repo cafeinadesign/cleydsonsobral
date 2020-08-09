@@ -9,6 +9,9 @@ nav > mat-toolbar {
   a.mat-button {
     font-family: "Barlow", sans-serif;
   }
+  a.mat-button:hover {
+    color: #df7b2a;
+  }
   a.mat-button.avatar {
     padding: 0;
     border-radius: 16px;
@@ -33,9 +36,10 @@ nav > mat-toolbar {
 /**
   * Rules for when the device is detected to be a small screen.
   */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   nav > mat-toolbar {
     a#logo {
+      text-align: left;
       margin-right: 10px;
     }
   }
