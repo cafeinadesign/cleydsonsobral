@@ -4,7 +4,7 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
+// import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { ScullyLibModule } from '@scullyio/ng-lib';
@@ -67,7 +67,7 @@ registerLocaleData(localePt, 'pt-BR');
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAnalyticsModule,
+    // AngularFireAnalyticsModule,
     AngularFireAuthModule,
     AppRoutingModule,
     ScullyLibModule,
