@@ -12,6 +12,22 @@
       <div class="spacer"></div>
       <a
         mat-button
+        aria-label="Cleydson Sobral no Facebook"
+        target="_blank"
+        rel="noopener"
+        href="https://www.facebook.com/nutricionistacleydsonsobral"
+        title="Facebook"
+        class="hide-small"
+      >
+        <img
+          src="assets/img/facebook.svg"
+          alt="instagram"
+          height="20"
+          style="margin-right: 3px;"
+        />
+      </a>
+      <a
+        mat-button
         aria-label="Cleydson Sobral no Instagram"
         target="_blank"
         rel="noopener"
@@ -25,7 +41,6 @@
           height="20"
           style="margin-right: 3px;"
         />
-        @cleydsonsobral
       </a>
       <a
         mat-button
@@ -37,18 +52,17 @@
         class="hide-small"
       >
         <img src="assets/img/whatsapp.svg" alt="whatsapp" height="24" />
-        (81) 99405-0213
       </a>
       <a
         mat-button
-        *ngIf="auth.user | async as user; else showLogin"
+        *ngIf="usuario; else showLogin"
         [matMenuTriggerFor]="menu"
         class="avatar"
       >
         <img
-          src="{{ user.photoURL }}"
-          alt="{{ user.displayName }}"
-          title="{{ user.displayName }}"
+          src="{{ usuario?.photoURL }}"
+          alt="{{ usuario?.displayName }}"
+          title="{{ usuario?.displayName }}"
         />
       </a>
       <mat-menu #menu="matMenu">
@@ -68,6 +82,5 @@
   <a mat-button href="#nutricionista">Sobre</a>
   <a mat-button href="#agendar">Consulta</a>
   <a mat-button href="#provasocial">Depoimentos</a>
-  <!-- <a mat-button href="#faq" title="Dúvidas Frequentes">FAQ</a> -->
   <a mat-button href="#redesociais">Contato</a>
 </nav>
