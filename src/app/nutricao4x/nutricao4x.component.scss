@@ -34,28 +34,31 @@ header {
 h1.mat-display-1 {
   font-weight: bold;
 }
+
+body,
+html {
+  height: 100%;
+  background: #fff;
+}
+
 .mat-raised-button {
-  border-radius: 40px;
-  padding: 6px 20px;
-  text-transform: uppercase;
-  transform: scale(1);
-  animation: pulse 2s infinite;
+  position: relative;
+  animation: pulse 1.5s infinite;
+}
+
+.mat-raised-button:hover {
+  animation: none;
 }
 
 @keyframes pulse {
   0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    transform: scale(0.9);
   }
-
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
   }
-
   100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    transform: scale(0.9);
   }
 }
 main {

@@ -130,9 +130,22 @@ main#agendar {
   padding-bottom: 30px;
 }
 
-#redesociais {
+#servico {
   color: #383b3f;
   background-color: whitesmoke;
+  padding: 30px 0;
+  h1,
+  h2 {
+    text-align: center;
+  }
+  h1.mat-display-1 {
+    margin-bottom: 0;
+  }
+}
+
+#redesociais {
+  color: #fff;
+  background-color: #383b3f;
   text-align: center;
   h1.mat-display-1 {
     margin-bottom: 30px;
