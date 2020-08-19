@@ -22,6 +22,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatTabsModule } from '@angular/material/tabs';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -84,6 +85,7 @@ registerLocaleData(localePt, 'pt-BR');
     MatFormFieldModule,
     MatInputModule,
     MatRadioModule,
+    MatTabsModule,
     ReactiveFormsModule,
     NgxMaskModule.forRoot(),
     LottieModule.forRoot({ player: playerFactory }),
