@@ -134,10 +134,13 @@ main#agendar {
 #servico {
   padding: 30px 0;
   h1,
-  h2 {
+  h2,
+  h3 {
+    font-family: "Archivo", sans-serif;
     text-align: center;
   }
   h1.mat-display-1 {
+    font-family: "Archivo", sans-serif;
     margin-bottom: 0;
   }
   div.mat-tab-body-content {

@@ -81,8 +81,31 @@ $md-cinza: (
   ),
 );
 
+// Create a config with the default typography levels.
+$config: mat-typography-config();
 // Be sure that you only ever include this mixin once!
 @include mat-core();
+
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+$custom-typography: mat-typography-config(
+  $font-family: '"Archivo", sans-serif',
+);
+
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+$custom-typography2: mat-typography-config(
+  $font-family: '"Barlow", sans-serif',
+);
+
+@include angular-material-typography($custom-typography);
+@include mat-base-typography($custom-typography2);
+
+.mat-tab-label,
+.mat-tab-link {
+  // font-size: mat-font-size($config, subheading-1);
+  font-family: mat-font-family($custom-typography);
+}
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
