@@ -132,8 +132,6 @@ main#agendar {
 }
 
 #servico {
-  color: #383b3f;
-  background-color: whitesmoke;
   padding: 30px 0;
   h1,
   h2 {
@@ -142,10 +140,14 @@ main#agendar {
   h1.mat-display-1 {
     margin-bottom: 0;
   }
+  div.mat-tab-body-content {
+    color: #383b3f;
+    background-color: whitesmoke;
+  }
 }
 
 #redesociais {
-  color: #fff;
+  color: whitesmoke;
   background-color: #383b3f;
   text-align: center;
   h1.mat-display-1 {

@@ -11,7 +11,7 @@
       <h3 class="mat-subheading-2">
         Cleydson Sobral - Nutricionista
       </h3>
-      <a routerLink="/consulta" mat-raised-button color="primary">
+      <a href="#agendar" mat-raised-button color="primary">
         Agendar Consulta
       </a>
       <a
@@ -221,8 +221,8 @@
     </div>
     <div style="text-align: center;">
       <h1 class="mat-display-1">Garanta sua Evolução</h1>
-      <a routerLink="/consulta" mat-raised-button color="accent">
-        Agendar Consulta Online
+      <a routerLink="#agendar" mat-raised-button color="accent">
+        Agendar Consulta
       </a>
     </div>
   </div>
@@ -234,7 +234,7 @@
         <h1 class="mat-display-1">
           Agende sua Consulta<br />Nutricional Agora
         </h1>
-        <a routerLink="/consulta" mat-raised-button>
+        <a href="#servico" mat-raised-button>
           Agendar Consulta
         </a>
         <a href="#nutricao4x" title="Nutrição 4x" mat-button>Saiba mais</a>
@@ -244,10 +244,11 @@
 </main>
 
 <section id="servico">
-  <div class="container">
-    <h1 class="mat-display-1">Serviços</h1>
-    <mat-tab-group mat-align-tabs="center">
-      <mat-tab label="Consulta presencial">
+  <h1 class="mat-display-1">Serviços</h1>
+
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Consulta presencial">
+      <div class="container">
         <h2 class="mat-headline" style="margin-top: 20px;">
           Quais são as etapas da consulta nutricional presencial?
         </h2>
@@ -310,8 +311,19 @@
             Claro, cada caso é avaliado individualmente.
           </dd>
         </dl>
-      </mat-tab>
-      <mat-tab label="Consulta on-line">
+        <div style="text-align: center;">
+          <a
+            href="https://api.whatsapp.com/send?phone=55819040213&text=Ol%C3%A1%20Cleydson%20Sobral%2C%20quero%20agendar%20uma%20consulta%20com%20voc%C3%AA!"
+            mat-raised-button
+            style="font-size: 24px; padding: 6px 36px;"
+            color="primary"
+            >Marcar consulta presencial</a
+          >
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Consulta on-line">
+      <div class="container">
         <h2 class="mat-headline" style="margin-top: 20px;">
           Quais são as etapas da consulta nutricional on-line?
         </h2>
@@ -373,19 +385,19 @@
             Claro, cada caso é avaliado individualmente.
           </dd>
         </dl>
-      </mat-tab>
-    </mat-tab-group>
 
-    <div style="text-align: center;">
-      <a
-        routerLink="/consulta"
-        mat-raised-button
-        style="font-size: 24px; padding: 6px 36px;"
-        color="primary"
-        >Marcar consulta</a
-      >
-    </div>
-  </div>
+        <div style="text-align: center;">
+          <a
+            routerLink="/consulta"
+            mat-raised-button
+            style="font-size: 24px; padding: 6px 36px;"
+            color="primary"
+            >Marcar consulta on-line</a
+          >
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
 </section>
 <section id="redesociais">
   <div class="container">
