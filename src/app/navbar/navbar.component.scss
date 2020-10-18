@@ -21,6 +21,10 @@ nav > mat-toolbar {
       border-radius: 16px;
     }
   }
+  a.icon-button {
+    padding: 5px;
+    margin: 5px 0;
+  }
 }
 .spacer {
   flex-grow: 1;
