@@ -9,6 +9,8 @@ import { environment } from 'src/environments/environment';
 import { User } from 'firebase';
 import { AnimationItem } from 'lottie-web';
 import { AnimationOptions } from 'ngx-lottie';
+import { UsuarioService } from './../services/usuario.service';
+import { auth } from 'firebase/app';
 
 @Component({
   selector: 'app-consulta',
@@ -50,10 +52,12 @@ export class ConsultaComponent implements OnInit {
   constructor(
     public auth: AngularFireAuth,
     private formBuilder: FormBuilder,
-    private http: HttpClient
+    private http: HttpClient,
+    private usuarioService: UsuarioService
   ) {
     this.customerForm = this.formBuilder.group({
       name: ['', Validators.required],
+      email: ['', Validators.required],
       cpf: ['', Validators.required],
       birthday: [''],
       phone_number: ['', Validators.required],
@@ -72,6 +76,12 @@ export class ConsultaComponent implements OnInit {
 
   ngOnInit(): void {
     this.carregando = false;
+    this.usuarioService.loginAnonimo().catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+    });
     this.auth.user.subscribe((usuario) => (this.usuario = usuario));
   }
   animationCreated(animationItem: AnimationItem): void {
@@ -116,7 +126,15 @@ export class ConsultaComponent implements OnInit {
         .connect({ encryption_key: environment.pagarme.encryptionKey })
         .then((client) => client.security.encrypt(cardData))
         .then((CARD_HASH) => {
-          console.log('birthday', this.customerForm.value.birthday);
+          const birthday = this.customerForm.value.birthday;
+          console.log(
+            'birthday',
+            birthday.substr(4) +
+              '-' +
+              birthday.substr(2, 2) +
+              '-' +
+              birthday.substr(0, 2)
+          );
           this.http
             .post(environment.pagarme.url + '/pagar', {
               CARD_HASH,
@@ -126,7 +144,7 @@ export class ConsultaComponent implements OnInit {
               customer: {
                 external_id: this.usuario.uid,
                 name: this.customerForm.value.name,
-                email: this.usuario.email,
+                email: this.customerForm.value.email,
                 documents: [
                   { number: this.customerForm.value.cpf.replace(/\D/g, '') },
                 ],
@@ -134,7 +152,12 @@ export class ConsultaComponent implements OnInit {
                   '+55' +
                     this.customerForm.value.phone_number.replace(/\D/g, ''),
                 ],
-                birthday: this.customerForm.value.birthday,
+                birthday:
+                  birthday.substr(4) +
+                  '-' +
+                  birthday.substr(2, 2) +
+                  '-' +
+                  birthday.substr(0, 2),
               },
               billing: {
                 address: {

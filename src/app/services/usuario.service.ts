@@ -12,4 +12,8 @@ export class UsuarioService {
     this.afAuth.languageCode = new Promise(() => 'pt');
     return this.afAuth.signInWithPopup(new auth.GoogleAuthProvider());
   }
+
+  loginAnonimo(): Promise<auth.UserCredential> {
+    return this.afAuth.signInAnonymously();
+  }
 }

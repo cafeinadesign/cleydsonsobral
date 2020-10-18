@@ -3,15 +3,9 @@
     <a routerLink="/">
       <img id="logo" src="assets/logo.svg" alt="Cleydson Sobral" height="24" />
     </a>
-    <mat-horizontal-stepper linear #stepper>
+    <mat-vertical-stepper linear #stepper>
       <mat-step [stepControl]="customerForm">
         <form [formGroup]="customerForm">
-          <img
-            [src]="usuario?.photoURL"
-            [alt]="usuario?.displayName"
-            id="avatar"
-          />
-          <h1 class="mat-headline">Olá, {{ usuario?.displayName }}</h1>
           <ng-template matStepLabel>Dados pessoais</ng-template>
           <h2 class="mat-title">Dados pessoais</h2>
           <mat-form-field appearance="outline" style="width: 260px">
@@ -23,6 +17,18 @@
               id="name"
               name="name"
               formControlName="name"
+              required
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="outline" style="width: 260px">
+            <mat-label>E-mail</mat-label>
+            <input
+              type="email"
+              matInput
+              placeholder="Digite seu melhor e-mail"
+              id="email"
+              name="email"
+              formControlName="email"
               required
             /> </mat-form-field
           ><br />
@@ -43,12 +49,13 @@
           <mat-form-field appearance="outline" style="width: 260px">
             <mat-label>Data de nascimento</mat-label>
             <input
-              type="date"
+              type="tel"
               matInput
-              placeholder="Data de nascimento"
+              placeholder="DD/MM/AAAA"
               id="birthday"
               name="birthday"
               formControlName="birthday"
+              mask="00/00/0000"
             />
           </mat-form-field>
           <div>
@@ -323,6 +330,6 @@
           </a>
         </div>
       </mat-step>
-    </mat-horizontal-stepper>
+    </mat-vertical-stepper>
   </mat-card>
 </div>
