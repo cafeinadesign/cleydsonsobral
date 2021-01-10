@@ -3,14 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import pagarme from 'pagarme/browser';
 import { environment } from 'src/environments/environment';
 import { User } from 'firebase';
 import { AnimationItem } from 'lottie-web';
 import { AnimationOptions } from 'ngx-lottie';
 import { UsuarioService } from './../services/usuario.service';
-import { auth } from 'firebase/app';
+import { SearchCountryField, TooltipLabel, CountryISO, PhoneNumberFormat } from 'ngx-intl-tel-input';
 
 @Component({
   selector: 'app-consulta',
@@ -48,6 +48,14 @@ export class ConsultaComponent implements OnInit {
     loop: false,
   };
   pagamentoProcessado = false;
+
+	SearchCountryField = SearchCountryField;
+	TooltipLabel = TooltipLabel;
+	CountryISO = CountryISO;
+  PhoneNumberFormat = PhoneNumberFormat;
+	// phoneForm = new FormGroup({
+	// 	phone: new FormControl(undefined, [Validators.required])
+	// });
 
   constructor(
     public auth: AngularFireAuth,
@@ -149,8 +157,7 @@ export class ConsultaComponent implements OnInit {
                   { number: this.customerForm.value.cpf.replace(/\D/g, '') },
                 ],
                 phone_numbers: [
-                  '+55' +
-                    this.customerForm.value.phone_number.replace(/\D/g, ''),
+                  this.customerForm.value.phone_number.e164Number,
                 ],
                 birthday:
                   birthday.substr(4) +

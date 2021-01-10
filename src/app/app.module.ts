@@ -38,6 +38,7 @@ import { LembrarSenhaComponent } from './lembrar-senha/lembrar-senha.component';
 import { ConsultaComponent } from './consulta/consulta.component';
 
 import { NgxMaskModule } from 'ngx-mask';
+import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 // Note we need a separate function as it's required
@@ -88,6 +89,7 @@ registerLocaleData(localePt, 'pt-BR');
     MatRadioModule,
     MatTabsModule,
     MatListModule,
+    NgxIntlTelInputModule,
     ReactiveFormsModule,
     NgxMaskModule.forRoot(),
     LottieModule.forRoot({ player: playerFactory }),

@@ -59,6 +59,23 @@
             />
           </mat-form-field>
           <div>
+            <h2 class="mat-title">Telefone/WhatsApp</h2>
+            <ngx-intl-tel-input
+              [preferredCountries]="[CountryISO.Brazil, CountryISO.UnitedStates, CountryISO.Canada, CountryISO.Portugal]"
+              [enableAutoCountrySelect]="true"
+              [enablePlaceholder]="true"
+              [searchCountryFlag]="true"
+              [maxLength]="15"
+              [separateDialCode]="true"
+              [numberFormat]="PhoneNumberFormat.National"
+              inputId="phone_number"
+              name="phone_number"
+              formControlName="phone_number"
+              searchCountryPlaceholder="Pesquisar país"
+            >
+            </ngx-intl-tel-input>
+          </div>
+          <!-- <div>
             <h2 class="mat-title">Contato</h2>
             <mat-form-field appearance="outline" style="width: 260px">
               <mat-label>Telefone/WhatsApp</mat-label>
@@ -74,7 +91,7 @@
                 required
               />
             </mat-form-field>
-          </div>
+          </div> -->
           <div>
             <h1 class="mat-headline">Endereço</h1>
             <h2 class="mat-title">
