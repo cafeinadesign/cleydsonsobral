@@ -5,12 +5,9 @@ button {
 }
 header {
   background: #383b3f;
-  background-image: url("../../assets/prato-arroz-feijao.png");
-  // background-image: url("../../assets/arroz-feijao.jpg");
+  background-image: url("../../assets/prato-arroz-feijao.jpg");
   background-position: 95% center;
-  background-size: auto 90%;
   background-repeat: no-repeat;
-  // margin-bottom: 40px;
   color: whitesmoke;
   div.header {
     padding: 60px 0;
@@ -188,8 +185,7 @@ main#agendar > div {
     */
 @media (max-width: 768px) {
   header {
-    background-image: url("../../assets/prato-arroz-feijao.png");
-    background-size: 46%;
+    background-image: url("../../assets/prato-arroz-feijao-mobile.jpg");
     background-position: right 62%;
   }
   main {
