@@ -6,7 +6,7 @@ button {
 header {
   background: #383b3f;
   background-image: url("../../assets/prato-arroz-feijao.jpg");
-  background-position: 95% center;
+  background-position: 75% center;
   background-repeat: no-repeat;
   color: whitesmoke;
   div.header {
@@ -180,9 +180,16 @@ main#agendar > div {
   font-weight: bold;
 }
 
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1400px) {
+  header {
+    background-position: 90% center;
+  }
+}
+
 /**
-    * Rules for when the device is detected to be a small screen.
-    */
+  * Rules for when the device is detected to be a small screen.
+*/
 @media (max-width: 768px) {
   header {
     background-image: url("../../assets/prato-arroz-feijao-mobile.jpg");
