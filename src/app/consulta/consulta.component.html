@@ -61,7 +61,12 @@
           <div>
             <h2 class="mat-title">Telefone/WhatsApp</h2>
             <ngx-intl-tel-input
-              [preferredCountries]="[CountryISO.Brazil, CountryISO.UnitedStates, CountryISO.Canada, CountryISO.Portugal]"
+              [preferredCountries]="[
+                CountryISO.Brazil,
+                CountryISO.UnitedStates,
+                CountryISO.Canada,
+                CountryISO.Portugal
+              ]"
               [enableAutoCountrySelect]="true"
               [enablePlaceholder]="true"
               [searchCountryFlag]="true"
@@ -271,9 +276,9 @@
                 required
                 (change)="quantidadeParcelas(cardForm.value.installments)"
               >
-                <option value="1">1x de R$470,00 - sem juros</option>
-                <option value="2">2x de R$244,40 - com juros (2% a.m.)</option>
-                <option value="3">3x de R$166,07 - com juros (2% a.m.)</option>
+                <option value="1">1x de R$570,00 - sem juros</option>
+                <option value="2">2x de R$285,00 - sem juros</option>
+                <option value="3">3x de R$190,00 - sem juros</option>
               </select>
             </mat-form-field>
           </div>

@@ -14,16 +14,16 @@ exports.pagar = functions.https.onRequest((req, res) => {
     // Grab the text parameter.
     const api_key = "ak_test_czTtptNuS6s1GR5DjVlTKfynYvXSus";
     // const api_key = "ak_live_QYD89scaEFGgzzpJdCTFX2yr4SSoL7";
-    var amount = 47000;
+    var amount = 57000;
     switch (req.body.installments) {
       case "1":
-        amount = 47000;
+        amount = 57000;
         break;
       case "2":
-        amount = 48880;
+        amount = 57000;
         break;
       case "3":
-        amount = 49820;
+        amount = 57000;
         break;
     }
     let transaction = {

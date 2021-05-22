@@ -10,7 +10,12 @@ import { User } from 'firebase';
 import { AnimationItem } from 'lottie-web';
 import { AnimationOptions } from 'ngx-lottie';
 import { UsuarioService } from './../services/usuario.service';
-import { SearchCountryField, TooltipLabel, CountryISO, PhoneNumberFormat } from 'ngx-intl-tel-input';
+import {
+  SearchCountryField,
+  TooltipLabel,
+  CountryISO,
+  PhoneNumberFormat,
+} from 'ngx-intl-tel-input';
 
 @Component({
   selector: 'app-consulta',
@@ -27,7 +32,7 @@ export class ConsultaComponent implements OnInit {
   usuario: User;
   cardForm;
   customerForm: FormGroup;
-  valorTotal = 47000;
+  valorTotal = 57000;
   carregando = true;
   endereco = 'Pesquise seu endereço pelo CEP';
   address: Endereco = {
@@ -49,13 +54,13 @@ export class ConsultaComponent implements OnInit {
   };
   pagamentoProcessado = false;
 
-	SearchCountryField = SearchCountryField;
-	TooltipLabel = TooltipLabel;
-	CountryISO = CountryISO;
+  SearchCountryField = SearchCountryField;
+  TooltipLabel = TooltipLabel;
+  CountryISO = CountryISO;
   PhoneNumberFormat = PhoneNumberFormat;
-	// phoneForm = new FormGroup({
-	// 	phone: new FormControl(undefined, [Validators.required])
-	// });
+  // phoneForm = new FormGroup({
+  // 	phone: new FormControl(undefined, [Validators.required])
+  // });
 
   constructor(
     public auth: AngularFireAuth,
@@ -286,13 +291,13 @@ export class ConsultaComponent implements OnInit {
   quantidadeParcelas(installments): void {
     switch (installments) {
       case '1':
-        this.valorTotal = 47000;
+        this.valorTotal = 57000;
         break;
       case '2':
-        this.valorTotal = 48880;
+        this.valorTotal = 57000;
         break;
       case '3':
-        this.valorTotal = 49820;
+        this.valorTotal = 57000;
         break;
     }
   }

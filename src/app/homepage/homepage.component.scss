@@ -180,6 +180,15 @@ main#agendar > div {
   font-weight: bold;
 }
 
+#whatsapp {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  img {
+    margin-top: -8px;
+  }
+}
+
 // X-Large devices (large desktops, 1200px and up)
 @media (max-width: 1400px) {
   header {
