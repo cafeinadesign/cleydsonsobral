@@ -23,7 +23,7 @@ exports.pagar = functions.https.onRequest((req, res) => {
         amount = 57000;
         break;
       case "3":
-        amount = 57000;
+        amount = 60420;
         break;
     }
     let transaction = {
